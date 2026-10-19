@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="FORMATIX - حلول متكاملة للمنازل: التصميم والتخطيط والديكور والتشطيبات والأثاث والتجهيز.">
+  <title>FORMATIX | Complete Home Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #c9a66b;
+      --gold-light: #ead4a5;
+      --black: #11100e;
+      --panel: #191815;
+      --muted: #b7b1a7;
+      --white: #f8f5ef;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.9;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .gold { color: var(--gold-light); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(17,16,14,.95);
+      border-bottom: 1px solid #c9a66b30;
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      color: var(--gold-light);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      direction: ltr;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      font-size: 13px;
+      color: #e0dacf;
+    }
+
+    .navlinks a:hover { color: var(--gold-light); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 23px;
+      background: linear-gradient(135deg, #e8d3a5, #b58a4e);
+      color: #17130d;
+      font-weight: 800;
+      border-radius: 3px;
+      transition: .25s;
+      border: 1px solid transparent;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button-outline {
+      background: transparent;
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(13,12,10,.88), rgba(13,12,10,.5)),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      border-bottom: 1px solid #c9a66b40;
+    }
+
+    .hero-content {
+      max-width: 740px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5.5vw, 67px);
+      line-height: 1.35;
+      margin: 18px 0;
+      font-weight: 800;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: #e1dcd2;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    section { padding: 85px 0; }
+
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-head h2 {
+      font-size: clamp(27px, 4vw, 40px);
+      margin: 8px 0 12px;
+    }
+
+    .section-head p { color: var(--muted); }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: var(--panel);
+      border: 1px solid #c9a66b25;
+      transition: .3s;
+      overflow: hidden;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .service img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: saturate(.8);
+    }
+
+    .service-body { padding: 22px; }
+
+    .number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .service h3 { margin: 7px 0; font-size: 20px; }
+
+    .service p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .about {
+      background: #181612;
+      border-top: 1px solid #c9a66b20;
+      border-bottom: 1px solid #c9a66b20;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border: 1px solid #c9a66b70;
+    }
+
+    .about h2 {
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.5;
+    }
+
+    .about p { color: var(--muted); }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .feature {
+      border-right: 2px solid var(--gold);
+      padding: 8px 14px;
+      background: #ffffff05;
+      font-size: 14px;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      background: var(--panel);
+    }
+
+    .project img {
+      width: 100%;
+      height: 300px;
+      display: block;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .project:hover img { transform: scale(1.05); }
+
+    .project-label {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 40px 18px 16px;
+      background: linear-gradient(transparent, #000e);
+    }
+
+    .project-label h3 { margin: 0; font-size: 19px; }
+    .project-label p { margin: 0; font-size: 12px; color: #e6d6b7; }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      border-top: 1px solid var(--gold);
+      padding: 20px 10px;
+    }
+
+    .step strong {
+      color: var(--gold-light);
+      font-size: 27px;
+      direction: ltr;
+      display: block;
+    }
+
+    .step p { color: var(--muted); font-size: 14px; }
+
+    .contact {
+      background:
+        linear-gradient(#11100eeb, #11100ef0),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+      text-align: center;
+      border-top: 1px solid #c9a66b50;
+    }
+
+    .contact h2 { font-size: clamp(30px, 4vw, 45px); }
+    .contact p { color: var(--muted); }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid #c9a66b25;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer .brand { font-size: 23px; margin-bottom: 8px; }
+
+    @media (max-width: 850px) {
+      .navlinks { gap: 12px; font-size: 12px; }
+      .nav-cta { display: none; }
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { gap: 28px; }
+      .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 560px) {
+      nav { min-height: 72px; flex-wrap: wrap; padding: 10px 0; }
+      .brand { font-size: 23px; }
+      .navlinks { width: 100%; justify-content: space-between; gap: 8px; font-size: 11px; }
+      .hero { min-height: 570px; }
+      .hero-content { padding: 65px 0; }
+      .hero p { font-size: 15px; }
+      section { padding: 62px 0; }
+      .services, .portfolio, .about-grid { grid-template-columns: 1fr; }
+      .service img { height: 230px; }
+      .about-image { height: 300px; }
+      .project img { height: 270px; }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="brand" href="#home">
+      FORMATIX
+      <small>BUILD • DESIGN • LIVE</small>
+    </a>
+
+    <div class="navlinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#about">عن الشركة</a>
+      <a href="#projects">معرض التصميمات</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+
+    <a class="button nav-cta" href="#contact">ابدأ مشروعك</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">COMPLETE HOME SOLUTIONS</div>
+        <h1>
+          بيت أحلامك يبدأ بفكرة،
+          <span class="gold">ونحوّلها لحقيقة.</span>
+        </h1>
+        <p>
+          من التصميم والتخطيط إلى التشطيبات والديكور والأثاث،
+          تقدم FORMATIX حلولًا متكاملة للمساحات السكنية،
+          باهتمام بالتفاصيل وجودة التنفيذ وجمال التصميم.
+        </p>
+        <div class="actions">
+          <a class="button" href="#services">اكتشف خدماتنا</a>
+          <a class="button button-outline" href="#contact">ناقشنا مشروعك</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">WHAT WE DO</div>
+        <h2>حلول متكاملة <span class="gold">تحت سقف واحد</span></h2>
+        <p>
+          ستة مجالات متكاملة لتخطيط وتجهيز وتطوير المساحات السكنية،
+          وفق احتياجات كل مشروع ونطاق العمل المتفق عليه.
+        </p>
+      </div>
+
+      <div class="services">
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=900&q=80" alt="أعمال إنشاء المباني">
+          <div class="service-body">
+            <div class="number">01 / CONSTRUCTION</div>
+            <h3>الإنشاءات والهياكل</h3>
+            <p>تنسيق أعمال البناء والإنشاءات السكنية وفق المخططات ومتطلبات المشروع، بالتعاون مع المتخصصين المعتمدين عند الحاجة.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="التصميم والتخطيط المعماري">
+          <div class="service-body">
+            <div class="number">02 / DESIGN & PLANNING</div>
+            <h3>التصميم والتخطيط</h3>
+            <p>تخطيط المساحات وتوزيع الأثاث واختيار الخامات وإعداد التصورات البصرية قبل بدء التنفيذ.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="تأسيسات الكهرباء والسباكة">
+          <div class="service-body">
+            <div class="number">03 / MEP</div>
+            <h3>السباكة والكهرباء</h3>
+            <p>تنسيق وتنفيذ أعمال التأسيسات الصحية والكهربائية والإضاءة وفق الرسومات الفنية ونطاق المشروع.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="تشطيبات وديكور داخلي">
+          <div class="service-body">
+            <div class="number">04 / FINISHING & DECOR</div>
+            <h3>التشطيبات والديكور</h3>
+            <p>الأرضيات والحوائط والأسقف والدهانات والإضاءة والجبس والخامات التي تمنح المكان شخصيته.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80" alt="الأثاث والتجهيزات الداخلية">
+          <div class="service-body">
+            <div class="number">05 / FURNITURE & FITTING</div>
+            <h3>الأثاث والتجهيزات</h3>
+            <p>اختيار الأثاث وتنسيق التجهيزات وأعمال النجارة والتركيب بما يتناسب مع التصميم والمساحة.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="منزل متكامل التصميم والفرش">
+          <div class="service-body">
+            <div class="number">06 / FULL INTERIOR</div>
+            <h3>التصميم الداخلي والفرش المتكامل</h3>
+            <p>حل متكامل يبدأ من تصور المساحة وينتهي بتنسيق التشطيبات والأثاث والتجهيزات حسب الاتفاق.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">ABOUT FORMATIX</div>
+        <h2>مش مجرد تشطيب،<br><span class="gold">دي تجربة متكاملة.</span></h2>
+        <p>
+          في FORMATIX نؤمن أن كل مساحة لها إمكانيات تستحق أن تظهر.
+          نربط بين التصميم العملي واللمسة الجمالية والتخطيط الجيد،
+          لنساعدك على تحويل أفكارك إلى مساحة تعبّر عنك.
+        </p>
+        <p>
+          سواء كنت تخطط لتجديد شقة أو تجهيز فيلا أو تطوير شاليه،
+          نبدأ بفهم احتياجاتك وميزانيتك ثم تحديد نطاق العمل المناسب.
+        </p>
+        <div class="features">
+          <div class="feature">تصميم يراعي احتياجاتك</div>
+          <div class="feature">اهتمام بالتفاصيل</div>
+          <div class="feature">تخطيط واضح للمشروع</div>
+          <div class="feature">تنسيق الخدمات المتكاملة</div>
+        </div>
+      </div>
+
+      <img class="about-image" loading="lazy"
+        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+        alt="تصميم داخلي أنيق">
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">DESIGN INSPIRATION</div>
+        <h2>مساحات تلهمك</h2>
+        <p>نماذج بصرية استرشادية لأساليب التصميم التي يمكن تطويرها بما يناسب مشروعك.</p>
+      </div>
+
+      <div class="portfolio">
+        <article class="project">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="تصميم غرفة معيشة">
+          <div class="project-label">
+            <h3>غرف المعيشة</h3>
+            <p>Living Spaces</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="تصميم فيلا">
+          <div class="project-label">
+            <h3>الفلل والمنازل</h3>
+            <p>Villas & Homes</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="تصميم مطبخ">
+          <div class="project-label">
+            <h3>المطابخ</h3>
+            <p>Kitchens</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="تصميم غرفة نوم">
+          <div class="project-label">
+            <h3>غرف النوم</h3>
+            <p>Bedrooms</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="تفاصيل التشطيب">
+          <div class="project-label">
+            <h3>تفاصيل التشطيب</h3>
+            <p>Finishing Details</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80" alt="تصميم داخلي فاخر">
+          <div class="project-label">
+            <h3>التصميم الفاخر</h3>
+            <p>Luxury Interiors</p>
+          </div>
+        </article>
+      </div>
+
+      <p style="text-align:center;color:#b7b1a7;font-size:12px;margin-top:22px">
+        الصور المعروضة للإلهام البصري وليست بالضرورة مشروعات منفذة بواسطة FORMATIX.
+      </p>
+    </div>
+  </section>
+
+  <section style="background:#181612">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">OUR PROCESS</div>
+        <h2>من الفكرة إلى <span class="gold">المكان اللي بتحلم بيه</span></h2>
+      </div>
+
+      <div class="process">
+        <div class="step">
+          <strong>01</strong>
+          <h3>نفهم احتياجاتك</h3>
+          <p>نتعرف على المساحة والميزانية والنتيجة التي تريد الوصول إليها.</p>
+        </div>
+        <div class="step">
+          <strong>02</strong>
+          <h3>نخطط ونصمم</h3>
+          <p>نحدد التصميم والخامات والتفاصيل المناسبة للمشروع.</p>
+        </div>
+        <div class="step">
+          <strong>03</strong>
+          <h3>ننسق التنفيذ</h3>
+          <p>نحدد نطاق الأعمال والجدول والتكلفة قبل بدء التنفيذ.</p>
+        </div>
+        <div class="step">
+          <strong>04</strong>
+          <h3>نراجع التفاصيل</h3>
+          <p>نتابع الأعمال المتفق عليها ونراجعها وفق متطلبات المشروع.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">LET'S BUILD YOUR DREAM</div>
+      <h2>عندك مساحة وعايز تغيّرها؟</h2>
+      <p>احكيلنا عن مشروعك، وابدأ أول خطوة مع FORMATIX.</p>
+      <!-- استبدل الرقم برقم واتساب الشركة بصيغة دولية بدون + أو مسافات -->
+      <a class="button" href="https://wa.me/201000000000" target="_blank" rel="noopener">
+        تواصل معنا عبر واتساب
+      </a>
+      <p style="font-size:12px;margin-top:18px">
+        غيّر رقم واتساب التجريبي إلى رقمك الحقيقي قبل نشر الموقع.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="brand">FORMATIX</div>
+    <div>BUILD • DESIGN • LIVE</div>
+    <p>COMPLETE HOME SOLUTIONS</p>
+    <p>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
