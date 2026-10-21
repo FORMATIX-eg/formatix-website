@@ -1,704 +1,1754 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#11110f">
-<meta name="description" content="FORMATIX — التصميم الداخلي، التصميم ثلاثي الأبعاد، التشطيبات، التجديد وحلول المنازل المتكاملة للشقق والفيلات والقصور والشاليهات.">
-<meta property="og:title" content="FORMATIX | BUILD • DESIGN • LIVE">
-<meta property="og:description" content="التصميم الداخلي والتشطيبات والتجديد — حلول تبدأ بفكرة وخطة واضحة.">
-<meta property="og:image" content="https://formatix-eg.github.io/formatix-website/LOGOU.jpeg">
-<title>FORMATIX | التصميم الداخلي والتشطيبات</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="FORMATIX - التصميم الداخلي، التصميم ثلاثي الأبعاد، التشطيبات، التنفيذ والتجديد وحلول المنازل المتكاملة للشقق والفيلات والقصور والشاليهات.">
+  <meta property="og:title" content="FORMATIX | BUILD • DESIGN • LIVE">
+  <meta property="og:description" content="التصميم الداخلي والتشطيبات والتجديد وحلول المنازل المتكاملة.">
+  <meta property="og:image" content="https://formatix-eg.github.io/formatix-website/LOGOU.jpeg">
+  <title>FORMATIX | التصميم الداخلي والتشطيبات</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --bg:#11110f;
-  --panel:#191916;
-  --gold:#d7b574;
-  --gold2:#f0d9a7;
-  --text:#f8f4ec;
-  --muted:#b9b2a5;
-  --line:rgba(215,181,116,.24);
-  --green:#25d366;
-  --max:1160px;
-}
+  <style>
+    :root {
+      --bg: #11110f;
+      --panel: #191916;
+      --gold: #d7b574;
+      --gold-light: #f0d9a7;
+      --text: #f8f4ec;
+      --muted: #b9b2a5;
+      --line: rgba(215,181,116,.25);
+      --green: #25d366;
+      --max: 1180px;
+    }
 
-* {box-sizing:border-box}
-html {scroll-behavior:smooth;scroll-padding-top:100px}
-body {
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Cairo,Tahoma,sans-serif;
-  line-height:1.85;
-}
-a {color:inherit;text-decoration:none}
-img {display:block;max-width:100%}
-button,input,select,textarea {font:inherit}
-button,a {-webkit-tap-highlight-color:transparent}
-.wrap {width:min(var(--max),calc(100% - 36px));margin:auto}
-.section {padding:88px 0}
-.kicker {color:var(--gold2);font-size:.82rem;font-weight:800;letter-spacing:.05em}
-.kicker:before {
-  content:"";display:inline-block;width:25px;height:1px;
-  background:var(--gold);vertical-align:middle;margin-left:10px
-}
-.head {max-width:760px;margin-bottom:34px}
-.head h2,.about h2,.video-copy h2,.quote-copy h2 {
-  font-size:clamp(2rem,4.5vw,3.2rem);
-  line-height:1.35;margin:10px 0 14px;font-weight:900;letter-spacing:-.03em
-}
-.head p,.muted {color:var(--muted)}
-.gold {color:var(--gold2)}
-.btn {
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  padding:12px 22px;min-height:49px;border-radius:999px;
-  border:1px solid transparent;font-weight:800;transition:.2s;cursor:pointer
-}
-.btn:hover {transform:translateY(-2px)}
-.primary {background:var(--gold);color:#17130b}
-.primary:hover {background:var(--gold2)}
-.outline {border-color:var(--line);background:#ffffff05}
-.outline:hover {border-color:var(--gold)}
+    * {
+      box-sizing: border-box;
+    }
 
-/* Header and larger logo */
-header {
-  position:sticky;top:0;z-index:50;background:#11110ff5;
-  backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12
-}
-.nav {
-  min-height:94px;display:flex;align-items:center;
-  justify-content:space-between;gap:18px
-}
-.brand {
-  display:flex;align-items:center;gap:12px;flex-shrink:0;
-  min-width:0
-}
-.logo {
-  display:block;width:210px;height:76px;max-width:100%;
-  object-fit:contain;object-position:center
-}
-.brand strong {display:block;font-size:1.12rem;letter-spacing:.12em;line-height:1.2}
-.brand small {display:block;color:var(--gold);font-size:.62rem;letter-spacing:.1em;margin-top:5px}
-.links {display:flex;align-items:center;gap:18px}
-.links a {font-size:.84rem;font-weight:700;color:#ddd6c9;white-space:nowrap}
-.links a:hover {color:var(--gold2)}
-.menu {
-  display:none;background:none;color:white;border:1px solid var(--line);
-  border-radius:12px;width:44px;height:44px;font-size:1.3rem;cursor:pointer
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
 
-/* Hero */
-.hero {
-  min-height:650px;display:flex;align-items:center;
-  position:relative;isolation:isolate;overflow:hidden
-}
-.hero:before {
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(90deg,#10100ff2,#10100fbf 55%,#10100f80),
-  url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=85") center/cover
-}
-.hero-content {padding:90px 0 110px;max-width:760px}
-.pill {
-  display:inline-block;border:1px solid var(--line);border-radius:999px;
-  padding:6px 14px;color:var(--gold2);background:#11110f80;font-size:.82rem;margin-bottom:20px
-}
-.hero h1 {font-size:clamp(2.7rem,6.4vw,5.1rem);line-height:1.18;letter-spacing:-.05em;margin:0 0 20px;font-weight:900}
-.hero p {color:#e0d9cd;max-width:650px;font-size:1.08rem;margin-bottom:28px}
-.actions {display:flex;gap:12px;flex-wrap:wrap}
-.hero-note {color:#d1c7b6;font-size:.84rem;margin-top:36px}
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Cairo", Tahoma, sans-serif;
+      line-height: 1.85;
+    }
 
-/* Intro strip */
-.strip {background:#171714;border-block:1px solid var(--line)}
-.strip-grid {display:grid;grid-template-columns:repeat(4,1fr)}
-.strip-item {padding:21px 14px;text-align:center;border-left:1px solid var(--line)}
-.strip-item:last-child {border:0}
-.strip-item b {display:block}
-.strip-item small {color:var(--muted)}
+    body, button, input, select, textarea {
+      font-family: "Cairo", Tahoma, sans-serif;
+    }
 
-/* About */
-.about-grid {display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
-.about-pics {position:relative;min-height:470px}
-.about-pics .mainpic {
-  position:absolute;inset:0 35px 38px 0;width:calc(100% - 35px);
-  height:calc(100% - 38px);object-fit:cover;border-radius:22px;border:1px solid var(--line)
-}
-.about-pics .smallpic {
-  position:absolute;bottom:0;left:0;width:42%;height:40%;
-  object-fit:cover;border:6px solid var(--bg);border-radius:18px
-}
-.about p {color:var(--muted)}
-.checks {display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;list-style:none;margin:24px 0}
-.checks li:before {content:"✓";color:var(--gold);margin-left:8px}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* Services */
-.services {background:#171714;border-block:1px solid #ffffff0b}
-.cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.card {
-  padding:26px;border:1px solid var(--line);border-radius:20px;
-  background:linear-gradient(145deg,#ffffff08,#ffffff02);transition:.2s
-}
-.card:hover {transform:translateY(-4px);border-color:#d7b57488}
-.num {color:#d7b57488;font-size:1.7rem;font-weight:900}
-.symbol {
-  display:grid;place-items:center;width:48px;height:48px;
-  border:1px solid var(--line);border-radius:14px;color:var(--gold);
-  font-size:1.3rem;margin:12px 0
-}
-.card h3 {margin:0 0 8px;font-size:1.12rem}
-.card p {margin:0;color:var(--muted);font-size:.9rem}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* Portfolio and video together */
-.portfolio {background:var(--bg)}
-.gallery {
-  display:grid;grid-template-columns:1.15fr 1fr 1fr;
-  grid-template-rows:225px 225px;gap:13px
-}
-.shot {
-  position:relative;overflow:hidden;border-radius:17px;
-  border:1px solid var(--line);background:var(--panel)
-}
-.shot:first-child {grid-row:span 2}
-.shot img {width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.shot:hover img {transform:scale(1.05)}
-.shot:after {
-  content:"";position:absolute;inset:40% 0 0;
-  background:linear-gradient(transparent,#000c);pointer-events:none
-}
-.shot span {position:absolute;z-index:1;bottom:15px;right:17px;font-weight:800}
-.note {font-size:.8rem;color:var(--muted);margin-top:14px}
-.portfolio-video {
-  margin-top:65px;padding-top:45px;border-top:1px solid var(--line)
-}
-.video-grid {display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:center}
-.video-copy p {color:var(--muted)}
-.video {
-  position:relative;aspect-ratio:16/9;background:#000;
-  border:1px solid var(--line);border-radius:20px;overflow:hidden
-}
-.video iframe {position:absolute;inset:0;width:100%;height:100%;border:0}
-.video-fallback {margin-top:12px;color:var(--muted);font-size:.82rem}
-.video-fallback a {color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-/* Work process */
-.process {background:#171714;border-block:1px solid #ffffff0b}
-.steps {display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.step {padding:23px 20px;border-top:1px solid var(--line);background:linear-gradient(#d7b5740b,transparent)}
-.step strong {display:block;color:var(--gold);font-size:2rem}
-.step h3 {margin:7px 0}
-.step p {color:var(--muted);font-size:.88rem;margin:0}
+    .wrap {
+      width: min(var(--max), calc(100% - 36px));
+      margin-inline: auto;
+    }
 
-/* Quote form */
-.quote {background:linear-gradient(135deg,#211d15,#121210);border-block:1px solid var(--line)}
-.quote-grid {display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
-.quote-copy p {color:var(--muted)}
-.contact-link {
-  display:block;padding:14px;border:1px solid var(--line);
-  border-radius:14px;margin-top:12px
-}
-.contact-link small {display:block;color:var(--muted)}
-.contact-link b {direction:ltr;display:block;text-align:right}
-.form {padding:27px;border:1px solid var(--line);border-radius:20px;background:#171714}
-.form h3 {margin:0 0 18px}
-.fields {display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field {display:flex;flex-direction:column;gap:6px;min-width:0}
-.field.full {grid-column:1/-1}
-.field label {font-size:.83rem;font-weight:700}
-.field input,.field select,.field textarea {
-  width:100%;min-height:47px;background:#10100f;color:var(--text);
-  border:1px solid #3a372f;border-radius:10px;padding:10px 12px
-}
-.field select option {background:#171714;color:var(--text)}
-.field textarea {min-height:100px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus {
-  outline:1px solid var(--gold);border-color:var(--gold)
-}
-.form-note {font-size:.75rem;color:var(--muted);margin:13px 0}
-.form button {width:100%}
+    .section {
+      padding: 85px 0;
+    }
 
-/* Closing section and footer */
-.closing {padding:52px 0;background:var(--gold);color:#17130b}
-.closing-inner {display:flex;align-items:center;justify-content:space-between;gap:25px}
-.closing h2 {margin:0;font-size:clamp(1.6rem,3vw,2.3rem)}
-.closing p {margin:5px 0;color:#403523}
-.closing .btn {background:#17130b;color:#fff4dc}
-.footer {background:#0b0b0a;padding:54px 0 20px}
-.footer-grid {display:grid;grid-template-columns:1.3fr .8fr .9fr;gap:40px;padding-bottom:32px}
-.footer p,.footer-links {color:var(--muted);font-size:.87rem}
-.footer h3 {color:var(--gold2);font-size:1rem}
-.footer-links {display:grid;gap:8px}
-.footer-links a:hover {color:var(--gold2)}
-.bottom {
-  border-top:1px solid #ffffff16;padding-top:18px;display:flex;
-  justify-content:space-between;gap:15px;flex-wrap:wrap;color:#817b70;font-size:.76rem
-}
+    .gold {
+      color: var(--gold-light);
+    }
 
-/* Floating buttons */
-.wa {
-  position:fixed;z-index:60;bottom:18px;left:18px;width:57px;height:57px;
-  border-radius:50%;display:grid;place-items:center;background:var(--green);
-  color:white;box-shadow:0 10px 30px #0008
-}
-.wa svg {width:31px;height:31px;display:block}
-.top {
-  position:fixed;bottom:84px;left:26px;z-index:55;border:1px solid var(--line);
-  border-radius:50%;background:#201f1a;color:var(--gold2);
-  width:40px;height:40px;display:none;cursor:pointer
-}
-.top.show {display:block}
+    .muted {
+      color: var(--muted);
+    }
 
-@media(max-width:1050px) {
-  .nav {gap:12px}
-  .logo {width:175px;height:70px}
-  .links {gap:11px}
-  .links a {font-size:.75rem}
-  .nav>.nav-cta {display:none}
-  .about-grid {gap:32px}
-  .cards {grid-template-columns:repeat(2,minmax(0,1fr))}
-  .gallery {grid-template-rows:210px 210px}
-}
-@media(max-width:740px) {
-  .wrap {width:calc(100% - 28px)}
-  .section {padding:68px 0}
-  .nav {min-height:78px;gap:10px}
-  .brand {flex:1;gap:7px}
-  .logo {width:155px;height:64px}
-  .brand strong {font-size:.9rem}
-  .brand small {font-size:.49rem}
-  .menu {display:block;flex-shrink:0}
-  .links {
-    position:absolute;top:100%;right:0;left:0;background:#11110ff7;
-    display:none;flex-direction:column;align-items:stretch;
-    padding:12px 20px 20px;border-bottom:1px solid var(--line)
-  }
-  .links.open {display:flex}
-  .links a {padding:11px 0;border-bottom:1px solid #ffffff10;font-size:.95rem}
-  .hero {min-height:610px}
-  .hero:before {
-    background:linear-gradient(90deg,#10100fe8,#10100fa8),
-    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80") center/cover
-  }
-  .hero-content {padding:72px 0 90px}
-  .hero h1 {font-size:clamp(2.5rem,10vw,4rem)}
-  .strip-grid {grid-template-columns:1fr 1fr}
-  .strip-item {padding:15px 6px;border-bottom:1px solid var(--line);font-size:.85rem}
-  .strip-item:nth-child(2) {border-left:0}
-  .strip-item:nth-child(n+3) {border-bottom:0}
-  .about-grid,.video-grid,.quote-grid {grid-template-columns:1fr;gap:30px}
-  .about-pics {min-height:390px;order:2}
-  .checks {grid-template-columns:1fr 1fr}
-  .cards {grid-template-columns:1fr 1fr;gap:10px}
-  .card {padding:19px 15px}
-  .card h3 {font-size:.98rem}
-  .card p {font-size:.81rem}
-  .gallery {grid-template-columns:1fr 1fr;grid-template-rows:205px 160px 160px}
-  .shot:first-child {grid-row:span 2}
-  .portfolio-video {margin-top:45px;padding-top:32px}
-  .steps {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-  .step {padding:18px 14px}
-  .form {padding:20px 15px}
-  .closing-inner {align-items:flex-start;flex-direction:column}
-  .footer-grid {grid-template-columns:1fr 1fr;gap:25px}
-  .footer-about {grid-column:1/-1}
-}
-@media(max-width:430px) {
-  .logo {width:125px;height:58px}
-  .brand {gap:5px}
-  .brand strong {font-size:.82rem}
-  .brand small {font-size:.43rem;letter-spacing:.06em}
-  .actions .btn {width:100%}
-  .cards {grid-template-columns:1fr}
-  .checks {grid-template-columns:1fr}
-  .fields {grid-template-columns:1fr}
-  .field.full {grid-column:auto}
-  .gallery {grid-template-rows:190px 145px 145px}
-  .footer-grid {grid-template-columns:1fr}
-  .footer-about {grid-column:auto}
-}
-@media(prefers-reduced-motion:reduce) {
-  html {scroll-behavior:auto}
-  * {transition:none!important}
-}
-</style>
+    .kicker {
+      color: var(--gold-light);
+      font-size: .85rem;
+      font-weight: 800;
+    }
+
+    .kicker::before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    .head {
+      max-width: 760px;
+      margin-bottom: 35px;
+    }
+
+    .head h2,
+    .about h2,
+    .video-copy h2,
+    .quote-copy h2 {
+      font-size: clamp(1.9rem, 4.5vw, 3.1rem);
+      line-height: 1.4;
+      margin: 10px 0 16px;
+      font-weight: 900;
+      letter-spacing: -.035em;
+    }
+
+    .head p,
+    .about p,
+    .video-copy p,
+    .quote-copy p {
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 49px;
+      padding: 12px 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      color: #17130b;
+      background: var(--gold);
+    }
+
+    .primary:hover {
+      background: var(--gold-light);
+    }
+
+    .outline {
+      border-color: var(--line);
+      background: #ffffff05;
+    }
+
+    .outline:hover {
+      border-color: var(--gold);
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(17,17,15,.97);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #ffffff14;
+    }
+
+    .nav {
+      min-height: 108px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      min-width: 0;
+    }
+
+    /* Large logo: the image is the main brand element */
+    .logo {
+      display: block;
+      width: 290px;
+      height: 94px;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+    }
+
+    .links a {
+      color: #e5ded1;
+      font-size: .83rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+
+    .links a:hover {
+      color: var(--gold-light);
+    }
+
+    .menu {
+      display: none;
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: transparent;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, #10100ff2, #10100fc9 55%, #10100f80),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=85")
+        center / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 85px 0 100px;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--gold-light);
+      background: #11110f80;
+      font-size: .84rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.5rem, 6.5vw, 5rem);
+      line-height: 1.22;
+      font-weight: 900;
+      letter-spacing: -.045em;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #e0d9cd;
+      font-size: 1.06rem;
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      margin-top: 30px;
+      color: #d1c7b6;
+      font-size: .88rem;
+    }
+
+    /* HIGHLIGHTS */
+
+    .strip {
+      background: #171714;
+      border-block: 1px solid var(--line);
+    }
+
+    .strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .strip-item {
+      padding: 22px 12px;
+      text-align: center;
+      border-left: 1px solid var(--line);
+    }
+
+    .strip-item:last-child {
+      border-left: 0;
+    }
+
+    .strip-item b,
+    .strip-item small {
+      display: block;
+    }
+
+    .strip-item small {
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-pics {
+      position: relative;
+      min-height: 450px;
+    }
+
+    .mainpic {
+      position: absolute;
+      inset: 0 35px 38px 0;
+      width: calc(100% - 35px);
+      height: calc(100% - 38px);
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+    }
+
+    .smallpic {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 42%;
+      height: 40%;
+      object-fit: cover;
+      border: 6px solid var(--bg);
+      border-radius: 18px;
+    }
+
+    .checks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 24px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checks li::before {
+      content: "✓";
+      color: var(--gold);
+      margin-left: 8px;
+    }
+
+    /* SERVICES */
+
+    .services,
+    .process {
+      background: #171714;
+      border-block: 1px solid #ffffff0b;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(145deg, #ffffff08, #ffffff02);
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #d7b57488;
+    }
+
+    .num {
+      color: #d7b57488;
+      font-size: 1.7rem;
+      font-weight: 900;
+    }
+
+    .symbol {
+      display: grid;
+      place-items: center;
+      width: 49px;
+      height: 49px;
+      margin: 12px 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--gold);
+      font-size: 1.35rem;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* PROJECT GALLERY */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1fr;
+      grid-template-rows: 225px 225px;
+      gap: 13px;
+    }
+
+    .shot {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--panel);
+    }
+
+    .shot:first-child {
+      grid-row: span 2;
+    }
+
+    .shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .shot:hover img {
+      transform: scale(1.05);
+    }
+
+    .shot::after {
+      content: "";
+      position: absolute;
+      inset: 40% 0 0;
+      background: linear-gradient(transparent, #000c);
+      pointer-events: none;
+    }
+
+    .shot span {
+      position: absolute;
+      z-index: 1;
+      right: 16px;
+      bottom: 13px;
+      font-weight: 800;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    /* VIDEO */
+
+    .portfolio-video {
+      margin-top: 60px;
+      padding-top: 45px;
+      border-top: 1px solid var(--line);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 35px;
+      align-items: center;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px #0004;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-fallback {
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .video-fallback a {
+      color: var(--gold-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* WORK PROCESS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      padding: 23px 19px;
+      border-top: 1px solid var(--line);
+      background: linear-gradient(#d7b5740b, transparent);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--gold);
+      font-size: 2rem;
+    }
+
+    .step h3 {
+      margin: 7px 0;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    /* CONTACT FORM */
+
+    .quote {
+      background: linear-gradient(135deg, #211d15, #121210);
+      border-block: 1px solid var(--line);
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 38px;
+      align-items: start;
+    }
+
+    .contact-link {
+      display: block;
+      margin-top: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      transition: border-color .2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--gold);
+    }
+
+    .contact-link small {
+      display: block;
+      color: var(--muted);
+    }
+
+    .contact-link b {
+      display: block;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .form {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #171714;
+    }
+
+    .form h3 {
+      margin: 0 0 18px;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: .83rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 47px;
+      padding: 10px 12px;
+      border: 1px solid #3a372f;
+      border-radius: 10px;
+      outline: none;
+      background: #10100f;
+      color: var(--text);
+      font-size: .9rem;
+    }
+
+    .field select option {
+      background: #171714;
+      color: var(--text);
+    }
+
+    .field textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px #d7b57420;
+    }
+
+    .form-note {
+      margin: 13px 0;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .form button {
+      width: 100%;
+    }
+
+    /* CLOSING CTA */
+
+    .closing {
+      padding: 50px 0;
+      background: var(--gold);
+      color: #17130b;
+    }
+
+    .closing-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .closing h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+    }
+
+    .closing p {
+      margin: 5px 0;
+      color: #403523;
+    }
+
+    .closing .btn {
+      background: #17130b;
+      color: #fff4dc;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding: 50px 0 20px;
+      background: #0b0b0a;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .8fr .9fr;
+      gap: 35px;
+      padding-bottom: 30px;
+    }
+
+    .footer .logo {
+      width: 240px;
+      height: 80px;
+    }
+
+    .footer p,
+    .footer-links {
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .footer h3 {
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 18px;
+      border-top: 1px solid #ffffff16;
+      color: #817b70;
+      font-size: .76rem;
+    }
+
+    /* FLOATING WHATSAPP AND BACK TO TOP */
+
+    .wa {
+      position: fixed;
+      z-index: 120;
+      bottom: 18px;
+      left: 18px;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 10px 30px #0008;
+    }
+
+    .wa svg {
+      display: block;
+      width: 31px;
+      height: 31px;
+    }
+
+    .top {
+      position: fixed;
+      z-index: 110;
+      bottom: 87px;
+      left: 27px;
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: #201f1a;
+      color: var(--gold-light);
+      cursor: pointer;
+    }
+
+    .top.show {
+      display: block;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1050px) {
+      .nav {
+        gap: 12px;
+      }
+
+      .logo {
+        width: 235px;
+        height: 88px;
+      }
+
+      .links {
+        gap: 10px;
+      }
+
+      .links a {
+        font-size: .75rem;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .about-grid {
+        gap: 30px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery {
+        grid-template-rows: 210px 210px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 740px) {
+      html {
+        scroll-padding-top: 88px;
+      }
+
+      .wrap {
+        width: calc(100% - 28px);
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .nav {
+        min-height: 88px;
+        gap: 8px;
+      }
+
+      .brand {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .logo {
+        width: 225px;
+        height: 78px;
+        max-width: 100%;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 18px;
+        border-bottom: 1px solid var(--line);
+        background: #11110ffa;
+      }
+
+      .links.open {
+        display: flex;
+      }
+
+      .links a {
+        padding: 11px 0;
+        border-bottom: 1px solid #ffffff10;
+        font-size: .95rem;
+      }
+
+      .hero {
+        min-height: 590px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg, #10100fee, #10100fb8),
+          url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80")
+          center / cover no-repeat;
+      }
+
+      .hero-content {
+        padding: 65px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 9.5vw, 3.8rem);
+      }
+
+      .strip-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .strip-item {
+        padding: 15px 5px;
+        font-size: .85rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .strip-item:nth-child(2) {
+        border-left: 0;
+      }
+
+      .strip-item:nth-child(n+3) {
+        border-bottom: 0;
+      }
+
+      .about-grid,
+      .video-grid,
+      .quote-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .about-pics {
+        min-height: 370px;
+        order: 2;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .card {
+        padding: 18px 14px;
+      }
+
+      .card h3 {
+        font-size: .98rem;
+      }
+
+      .card p {
+        font-size: .82rem;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 155px 155px;
+      }
+
+      .shot:first-child {
+        grid-row: span 2;
+      }
+
+      .portfolio-video {
+        margin-top: 42px;
+        padding-top: 30px;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .step {
+        padding: 17px 13px;
+      }
+
+      .form {
+        padding: 20px 15px;
+      }
+
+      .closing-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 23px;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .logo {
+        width: 195px;
+        height: 70px;
+      }
+
+      .hero h1 {
+        font-size: 2.35rem;
+      }
+
+      .actions .btn {
+        width: 100%;
+      }
+
+      .cards,
+      .checks,
+      .fields,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full,
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .gallery {
+        grid-template-rows: 185px 140px 140px;
+      }
+
+      .footer .logo {
+        width: 220px;
+        height: 75px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="FORMATIX الرئيسية">
-      <img class="logo" src="LOGOU.jpeg" alt="شعار FORMATIX">
-      <span>
-        <strong>FORMATIX</strong>
-        <small>BUILD • DESIGN • LIVE</small>
-      </span>
-    </a>
 
-    <nav class="links" id="nav" aria-label="القائمة الرئيسية">
-      <a href="#home">الرئيسية</a>
-      <a href="#about">عن الشركة</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#portfolio">من أعمالنا</a>
-      <a href="#process">مراحل العمل</a>
-      <a href="#contact">اطلب عرض سعر</a>
-    </nav>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="FORMATIX - الرئيسية">
+        <img class="logo"
+             src="LOGOU.jpeg"
+             alt="شعار FORMATIX"
+             fetchpriority="high">
+      </a>
 
-    <a class="btn primary nav-cta" href="#contact">ابدأ مشروعك ↙</a>
-    <button class="menu" id="menu" type="button" aria-label="فتح القائمة" aria-expanded="false">☰</button>
-  </div>
-</header>
+      <nav class="links" id="nav" aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">عن الشركة</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#portfolio">معرض التصميم</a>
+        <a href="#process">مراحل العمل</a>
+        <a href="#contact">اطلب عرض سعر</a>
+      </nav>
 
-<main>
-  <section class="hero" id="home">
-    <div class="wrap">
-      <div class="hero-content">
-        <span class="pill">تصميم مدروس • تفاصيل تصنع الفرق</span>
-        <h1>مساحتك تستحق<br><span class="gold">تصميمًا يليق بيك.</span></h1>
-        <p>من أول فكرة ورسمة 3D لحد التشطيب والتجديد، بنساعدك تخطط لمساحة عملية وأنيقة تناسب ذوقك واحتياجاتك وميزانيتك.</p>
-        <div class="actions">
-          <a class="btn primary" href="#contact">اطلب عرض سعر ↗</a>
-          <a class="btn outline" href="#portfolio">استكشف أفكار التصميم</a>
-        </div>
-        <div class="hero-note">للشقق • الفيلات • القصور • الشاليهات</div>
-      </div>
+      <a class="btn primary nav-cta" href="#contact">ابدأ مشروعك ↙</a>
+
+      <button class="menu"
+              id="menu"
+              type="button"
+              aria-label="فتح القائمة"
+              aria-expanded="false"
+              aria-controls="nav">☰</button>
     </div>
-  </section>
+  </header>
 
-  <div class="strip">
-    <div class="wrap strip-grid">
-      <div class="strip-item"><b>حلول منزلية</b><small>من التخطيط للتجديد</small></div>
-      <div class="strip-item"><b>تصميم داخلي</b><small>وظيفة وجمال بتوازن</small></div>
-      <div class="strip-item"><b>تصميم 3D</b><small>تصور أوضح قبل التنفيذ</small></div>
-      <div class="strip-item"><b>تشطيب وتجديد</b><small>نطاق عمل واضح</small></div>
-    </div>
-  </div>
+  <main>
 
-  <section class="section" id="about">
-    <div class="wrap about-grid">
-      <div class="about-pics">
-        <img class="mainpic" loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="تصميم داخلي معاصر">
-        <img class="smallpic" loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=80" alt="تفاصيل ديكور">
-      </div>
-      <div class="about">
-        <span class="kicker">عن FORMATIX</span>
-        <h2>مش مجرد شكل حلو.<br><span class="gold">دي مساحة معمولة ليك.</span></h2>
-        <p>بنؤمن إن التصميم الناجح يجمع بين الذوق والراحة والاستغلال الذكي للمساحة. بنبدأ بفهم احتياجاتك، ونرتب الأفكار في خطة واضحة قبل قرارات التنفيذ.</p>
-        <p>سواء بتجهز مكان جديد أو بتجدد مساحة موجودة، هدفنا إنك تفهم الاختيارات ونطاق الشغل والتكلفة المتوقعة قبل البداية.</p>
-        <ul class="checks">
-          <li>تخطيط يناسب احتياجاتك</li>
-          <li>تصور بصري قبل التنفيذ</li>
-          <li>نطاق عمل واضح</li>
-          <li>حلول حسب الميزانية</li>
-        </ul>
-        <a class="btn outline" href="#services">اعرف خدماتنا ←</a>
-      </div>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="hero-content">
+          <span class="pill">تصميم مدروس • تفاصيل تصنع الفرق</span>
 
-  <section class="section services" id="services">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker">خدماتنا</span>
-        <h2>كل تفاصيل مساحتك، <span class="gold">بخطة واضحة.</span></h2>
-        <p class="muted">نحدد الخدمة المناسبة حسب احتياجك وطبيعة مشروعك.</p>
-      </div>
-      <div class="cards">
-        <article class="card"><span class="num">01</span><div class="symbol">⌂</div><h3>التصميم الداخلي</h3><p>تنسيق الألوان والخامات والإضاءة والأثاث لصناعة مساحة متناسقة وعملية.</p></article>
-        <article class="card"><span class="num">02</span><div class="symbol">▦</div><h3>التصميم ثلاثي الأبعاد 3D</h3><p>تصور بصري يساعدك تتخيل النتيجة وتراجع الاختيارات قبل التنفيذ.</p></article>
-        <article class="card"><span class="num">03</span><div class="symbol">✧</div><h3>التشطيبات الداخلية</h3><p>تنسيق بنود التشطيب والخامات والتفاصيل حسب نطاق العمل المتفق عليه.</p></article>
-        <article class="card"><span class="num">04</span><div class="symbol">⌁</div><h3>التنفيذ والتنسيق</h3><p>ترتيب مراحل العمل والتنسيق بين البنود لتوضيح المسؤوليات والتسلسل.</p></article>
-        <article class="card"><span class="num">05</span><div class="symbol">↻</div><h3>التجديد وإعادة التأهيل</h3><p>تطوير المساحات القديمة وتحسين توزيعها ومظهرها حسب الحالة والاحتياج.</p></article>
-        <article class="card"><span class="num">06</span><div class="symbol">⌂</div><h3>حلول منزلية متكاملة</h3><p>دعم مشروع شقتك أو فيلتك أو قصرك أو شاليهك من التخطيط لتفاصيل التجهيز.</p></article>
-      </div>
-    </div>
-  </section>
+          <h1>
+            مساحتك تستحق
+            <br>
+            <span class="gold">تصميمًا يليق بيك.</span>
+          </h1>
 
-  <!-- Portfolio: inspiration gallery and video are now in one section -->
-  <section class="section portfolio" id="portfolio">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker">من أعمالنا</span>
-        <h2>أفكار تفتح لك <span class="gold">احتمالات جديدة.</span></h2>
-        <p class="muted">صور استرشادية لأساليب ومساحات مختلفة تساعدنا نفهم ذوقك والاتجاه اللي تحبه.</p>
-      </div>
+          <p>
+            من أول فكرة ورسمة 3D لحد التشطيب والتجديد،
+            بنساعدك تخطط لمساحة عملية وأنيقة تناسب ذوقك
+            واحتياجاتك وميزانيتك.
+          </p>
 
-      <div class="gallery">
-        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="غرفة معيشة معاصرة"><span>مساحات معيشة متوازنة</span></div>
-        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="تصميم بألوان هادئة"><span>بساطة بتفاصيل راقية</span></div>
-        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="ركن جلوس أنيق"><span>راحة في كل ركن</span></div>
-        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="تفاصيل خامات وأثاث"><span>الخامات تصنع الفرق</span></div>
-        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80" alt="مساحة داخلية أنيقة"><span>إضاءة ومزاج متناسق</span></div>
-      </div>
-
-      <p class="note">تنويه: الصور للإلهام والاسترشاد البصري، وليست ادعاءً بأنها مشروعات منفذة بواسطة FORMATIX. سيتم تحديث المعرض بأعمال موثقة عند توفرها.</p>
-
-      <div class="portfolio-video" id="video">
-        <div class="video-grid">
-          <div class="video-copy">
-            <span class="kicker">فيديو التصميم</span>
-            <h2>شاهد أفكار التصميم <span class="gold">والتفاصيل البصرية.</span></h2>
-            <p>شاهد الفيديو للتعرف على أفكار التصميم الداخلي. إذا لم يسمح يوتيوب بتشغيله داخل الصفحة، يمكنك فتحه مباشرة على يوتيوب.</p>
-            <a class="btn outline" href="https://www.youtube.com/watch?v=ykHj9b2pP6A" target="_blank" rel="noopener noreferrer">شاهد على YouTube ↗</a>
+          <div class="actions">
+            <a class="btn primary" href="#contact">اطلب عرض سعر ↗</a>
+            <a class="btn outline" href="#portfolio">استكشف أفكار التصميم</a>
           </div>
-          <div>
-            <div class="video">
-              <iframe
-                loading="lazy"
-                src="https://www.youtube-nocookie.com/embed/ykHj9b2pP6A?rel=0"
-                title="فيديو التصميم الداخلي - FORMATIX"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-              </iframe>
+
+          <div class="hero-note">
+            للشقق • الفيلات • القصور • الشاليهات
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <div class="strip">
+      <div class="wrap strip-grid">
+        <div class="strip-item">
+          <b>حلول منزلية</b>
+          <small>من التخطيط للتجديد</small>
+        </div>
+        <div class="strip-item">
+          <b>تصميم داخلي</b>
+          <small>وظيفة وجمال بتوازن</small>
+        </div>
+        <div class="strip-item">
+          <b>تصميم 3D</b>
+          <small>تصور أوضح قبل التنفيذ</small>
+        </div>
+        <div class="strip-item">
+          <b>تشطيب وتجديد</b>
+          <small>نطاق عمل واضح</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+
+        <div class="about-pics">
+          <img class="mainpic"
+               loading="lazy"
+               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+               alt="تصميم داخلي معاصر">
+
+          <img class="smallpic"
+               loading="lazy"
+               src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=80"
+               alt="تفاصيل ديكور وأثاث">
+        </div>
+
+        <div class="about">
+          <span class="kicker">عن FORMATIX</span>
+
+          <h2>
+            مش مجرد شكل حلو.
+            <br>
+            <span class="gold">دي مساحة معمولة ليك.</span>
+          </h2>
+
+          <p>
+            بنؤمن إن التصميم الناجح يجمع بين الذوق والراحة
+            والاستغلال الذكي للمساحة. بنبدأ بفهم احتياجاتك،
+            ونرتب الأفكار في خطة واضحة قبل قرارات التنفيذ.
+          </p>
+
+          <p>
+            سواء بتجهز مكان جديد أو بتجدد مساحة موجودة،
+            هدفنا إنك تفهم الاختيارات ونطاق الشغل والتكلفة
+            المتوقعة قبل البداية.
+          </p>
+
+          <ul class="checks">
+            <li>تخطيط يناسب احتياجاتك</li>
+            <li>تصور بصري قبل التنفيذ</li>
+            <li>نطاق عمل واضح</li>
+            <li>حلول حسب الميزانية</li>
+          </ul>
+
+          <a class="btn outline" href="#services">اعرف خدماتنا ←</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="wrap">
+
+        <div class="head">
+          <span class="kicker">خدماتنا</span>
+          <h2>كل تفاصيل مساحتك، <span class="gold">بخطة واضحة.</span></h2>
+          <p>نحدد الخدمة المناسبة حسب احتياجك وطبيعة مشروعك.</p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <span class="num">01</span>
+            <div class="symbol">⌂</div>
+            <h3>التصميم الداخلي</h3>
+            <p>تنسيق الألوان والخامات والإضاءة والأثاث لصناعة مساحة متناسقة وعملية.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">02</span>
+            <div class="symbol">▦</div>
+            <h3>التصميم ثلاثي الأبعاد 3D</h3>
+            <p>تصور بصري يساعدك تتخيل النتيجة وتراجع الاختيارات قبل التنفيذ.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">03</span>
+            <div class="symbol">✧</div>
+            <h3>التشطيبات الداخلية</h3>
+            <p>تنسيق بنود التشطيب والخامات والتفاصيل حسب نطاق العمل المتفق عليه.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">04</span>
+            <div class="symbol">⌁</div>
+            <h3>التنفيذ والتنسيق</h3>
+            <p>ترتيب مراحل العمل والتنسيق بين البنود لتوضيح المسؤوليات والتسلسل.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">05</span>
+            <div class="symbol">↻</div>
+            <h3>التجديد وإعادة التأهيل</h3>
+            <p>تطوير المساحات القديمة وتحسين توزيعها ومظهرها حسب الحالة والاحتياج.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">06</span>
+            <div class="symbol">⌂</div>
+            <h3>حلول منزلية متكاملة</h3>
+            <p>دعم مشروع شقتك أو فيلتك أو قصرك أو شاليهك من التخطيط لتفاصيل التجهيز.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO AND VIDEO -->
+    <section class="section" id="portfolio">
+      <div class="wrap">
+
+        <div class="head">
+          <span class="kicker">معرض التصميم</span>
+          <h2>أفكار تفتح لك <span class="gold">احتمالات جديدة.</span></h2>
+          <p>
+            صور استرشادية لأساليب ومساحات مختلفة تساعدنا نفهم
+            ذوقك والاتجاه اللي تحبه.
+          </p>
+        </div>
+
+        <div class="gallery">
+
+          <div class="shot">
+            <img loading="lazy"
+                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                 alt="غرفة معيشة معاصرة">
+            <span>مساحات معيشة متوازنة</span>
+          </div>
+
+          <div class="shot">
+            <img loading="lazy"
+                 src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
+                 alt="تصميم بألوان هادئة">
+            <span>بساطة بتفاصيل راقية</span>
+          </div>
+
+          <div class="shot">
+            <img loading="lazy"
+                 src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+                 alt="ركن جلوس أنيق">
+            <span>راحة في كل ركن</span>
+          </div>
+
+          <div class="shot">
+            <img loading="lazy"
+                 src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80"
+                 alt="تفاصيل خامات وأثاث">
+            <span>الخامات تصنع الفرق</span>
+          </div>
+
+          <div class="shot">
+            <img loading="lazy"
+                 src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80"
+                 alt="مساحة داخلية أنيقة">
+            <span>إضاءة ومزاج متناسق</span>
+          </div>
+
+        </div>
+
+        <p class="note">
+          الصور للإلهام والاسترشاد البصري، وليست ادعاءً بأنها
+          مشروعات منفذة بواسطة FORMATIX.
+        </p>
+
+        <!-- VIDEO -->
+        <div class="portfolio-video" id="video">
+          <div class="video-grid">
+
+            <div class="video-copy">
+              <span class="kicker">فيديو التصميم</span>
+
+              <h2>
+                شاهد أفكار التصميم
+                <span class="gold">والتفاصيل البصرية.</span>
+              </h2>
+
+              <p>
+                اكتشف تفاصيل التصميم الداخلي وشاهد الفيديو
+                لتتعرف على أفكار جديدة لمساحتك.
+              </p>
+
+              <a class="btn primary"
+                 href="https://www.youtube.com/watch?v=ykHj9b2pP6A"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                شاهد الفيديو على YouTube ↗
+              </a>
             </div>
-            <p class="video-fallback">لو الفيديو لم يعمل داخل الصفحة، <a href="https://www.youtube.com/watch?v=ykHj9b2pP6A" target="_blank" rel="noopener noreferrer">افتحه مباشرة على YouTube</a>.</p>
+
+            <div class="video-column">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/ykHj9b2pP6A"
+                  title="فيديو التصميم الداخلي - FORMATIX"
+                  loading="eager"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <p class="video-fallback">
+                لو الفيديو لم يعمل داخل الموقع،
+                <a href="https://youtu.be/ykHj9b2pP6A"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  افتحه مباشرة على YouTube من هنا.
+                </a>
+              </p>
+            </div>
+
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section process" id="process">
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+      <div class="wrap">
+
+        <div class="head">
+          <span class="kicker">مراحل العمل</span>
+          <h2>من الفكرة إلى التنفيذ، <span class="gold">خطوة بخطوة.</span></h2>
+          <p>وضوح في التفاصيل يساعدك تاخد قراراتك بثقة.</p>
+        </div>
+
+        <div class="steps">
+
+          <article class="step">
+            <strong>01</strong>
+            <h3>نفهم احتياجك</h3>
+            <p>نتعرف على طبيعة المكان وذوقك والهدف من المشروع.</p>
+          </article>
+
+          <article class="step">
+            <strong>02</strong>
+            <h3>نحدد نطاق العمل</h3>
+            <p>نتفق على المطلوب والخدمات المناسبة والبيانات اللازمة للتسعير.</p>
+          </article>
+
+          <article class="step">
+            <strong>03</strong>
+            <h3>نخطط ونصمم</h3>
+            <p>نرتب الأفكار والاختيارات والتصورات وفق نطاق الخدمة.</p>
+          </article>
+
+          <article class="step">
+            <strong>04</strong>
+            <h3>ننسق الخطوة التالية</h3>
+            <p>بعد اعتماد التفاصيل تتحدد مراحل التنفيذ أو التسليم بحسب الاتفاق.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section quote" id="contact">
+      <div class="wrap quote-grid">
+
+        <div class="quote-copy">
+          <span class="kicker">ابدأ مشروعك</span>
+
+          <h2>
+            احكيلنا عن مساحتك،
+            <span class="gold">ونبدأ من هنا.</span>
+          </h2>
+
+          <p>
+            املأ البيانات لتجهيز رسالة على واتساب.
+            هتراجع الرسالة وتبعتها بنفسك؛ النموذج لا يرسل بياناتك تلقائيًا.
+          </p>
+
+          <a class="contact-link"
+             href="https://wa.me/201032219692"
+             target="_blank"
+             rel="noopener noreferrer">
+            <small>تواصل مباشر عبر واتساب</small>
+            <b>01032219692</b>
+          </a>
+
+          <a class="contact-link"
+             href="https://www.facebook.com/profile.php?id=61595418460010"
+             target="_blank"
+             rel="noopener noreferrer">
+            <small>تابع الصفحة</small>
+            <b style="direction:rtl">FORMATIX على Facebook</b>
+          </a>
+
+          <a class="contact-link"
+             href="https://www.youtube.com/watch?v=ykHj9b2pP6A"
+             target="_blank"
+             rel="noopener noreferrer">
+            <small>شاهد الفيديو</small>
+            <b style="direction:rtl">FORMATIX على YouTube ↗</b>
+          </a>
+        </div>
+
+        <form class="form" id="quoteForm">
+          <h3>بيانات مشروعك</h3>
+
+          <div class="fields">
+
+            <div class="field">
+              <label for="name">الاسم *</label>
+              <input id="name"
+                     name="name"
+                     required
+                     maxlength="80"
+                     autocomplete="name"
+                     placeholder="اكتب اسمك">
+            </div>
+
+            <div class="field">
+              <label for="phone">رقم الموبايل *</label>
+              <input id="phone"
+                     name="phone"
+                     type="tel"
+                     required
+                     maxlength="25"
+                     autocomplete="tel"
+                     placeholder="رقم للتواصل">
+            </div>
+
+            <div class="field">
+              <label for="type">نوع المشروع *</label>
+              <select id="type" name="type" required>
+                <option value="">اختر نوع المشروع</option>
+                <option>شقة</option>
+                <option>فيلا</option>
+                <option>قصر</option>
+                <option>شاليه</option>
+                <option>تجديد مساحة قائمة</option>
+                <option>تصميم 3D فقط</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="area">المساحة التقريبية</label>
+              <input id="area"
+                     name="area"
+                     placeholder="مثال: 150 متر">
+            </div>
+
+            <div class="field">
+              <label for="location">المنطقة</label>
+              <input id="location"
+                     name="location"
+                     placeholder="المدينة أو المنطقة">
+            </div>
+
+            <div class="field">
+              <label for="budget">الميزانية التقريبية</label>
+              <select id="budget" name="budget">
+                <option value="">اختياري</option>
+                <option>لسه بحدد الميزانية</option>
+                <option>أقل من 200 ألف جنيه</option>
+                <option>200 إلى 500 ألف جنيه</option>
+                <option>500 ألف إلى مليون جنيه</option>
+                <option>أكثر من مليون جنيه</option>
+                <option>أفضل مناقشة الميزانية</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="start">موعد البداية المتوقع</label>
+              <select id="start" name="start">
+                <option value="">اختياري</option>
+                <option>في أقرب وقت</option>
+                <option>خلال شهر</option>
+                <option>خلال 3 شهور</option>
+                <option>لاحقًا / ما زلت أخطط</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="status">حالة المكان</label>
+              <select id="status" name="status">
+                <option value="">اختياري</option>
+                <option>على الطوب / بدون تشطيب</option>
+                <option>تشطيب قائم يحتاج تجديد</option>
+                <option>محتاج تصميم فقط</option>
+                <option>محتاج تشطيب جزئي</option>
+                <option>لسه باستلم أو بشتري</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="details">تفاصيل إضافية</label>
+              <textarea id="details"
+                        name="details"
+                        maxlength="1200"
+                        placeholder="قول لنا إيه اللي محتاجه..."></textarea>
+            </div>
+
+          </div>
+
+          <p class="form-note">
+            * البيانات المطلوبة أساسية لتجهيز الرسالة.
+            راجع رسالة واتساب قبل إرسالها.
+          </p>
+
+          <button class="btn primary" type="submit">
+            جهّز رسالة واتساب ↗
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <div>
+          <h2>عندك فكرة؟ خلينا نرتب أول خطوة.</h2>
+          <p>كل مشروع بيبدأ بمحادثة واضحة عن احتياجاتك.</p>
+        </div>
+
+        <a class="btn"
+           href="https://wa.me/201032219692?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20FORMATIX%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85."
+           target="_blank"
+           rel="noopener noreferrer">
+          تواصل مع FORMATIX ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="wrap">
-      <div class="head">
-        <span class="kicker">مراحل العمل</span>
-        <h2>من أول مكالمة، <span class="gold">لخطوة محسوبة.</span></h2>
-        <p class="muted">تتحدد التفاصيل النهائية حسب طبيعة المشروع ونطاق الخدمة المتفق عليه.</p>
-      </div>
-      <div class="steps">
-        <article class="step"><strong>01</strong><h3>نفهم احتياجاتك</h3><p>نتعرف على المساحة والاستخدام والذوق والأولويات والميزانية التقريبية.</p></article>
-        <article class="step"><strong>02</strong><h3>نحدد نطاق العمل</h3><p>نتفق على المطلوب والخدمات المناسبة والبيانات اللازمة للتسعير.</p></article>
-        <article class="step"><strong>03</strong><h3>نخطط ونصمم</h3><p>نرتب الأفكار والاختيارات والتصورات وفق نطاق الخدمة.</p></article>
-        <article class="step"><strong>04</strong><h3>ننسق الخطوة التالية</h3><p>بعد اعتماد التفاصيل تتحدد مراحل التنفيذ أو التسليم بحسب الاتفاق.</p></article>
-      </div>
-    </div>
-  </section>
 
-  <section class="section quote" id="contact">
-    <div class="wrap quote-grid">
-      <div class="quote-copy">
-        <span class="kicker">ابدأ مشروعك</span>
-        <h2>احكيلنا عن مساحتك، <span class="gold">ونبدأ من هنا.</span></h2>
-        <p>املأ البيانات لتجهيز رسالة على واتساب. هتراجع الرسالة وتبعتها بنفسك؛ النموذج لا يرسل بياناتك تلقائيًا.</p>
+      <div class="footer-grid">
 
-        <a class="contact-link" href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">
-          <small>تواصل مباشر عبر واتساب</small><b>01032219692</b>
-        </a>
-        <a class="contact-link" href="https://www.facebook.com/profile.php?id=61595418460010" target="_blank" rel="noopener noreferrer">
-          <small>تابع الصفحة</small><b style="direction:rtl">FORMATIX على Facebook</b>
-        </a>
-      </div>
+        <div class="footer-about">
+          <a class="brand" href="#home" aria-label="FORMATIX - الرئيسية">
+            <img class="logo"
+                 src="LOGOU.jpeg"
+                 alt="شعار FORMATIX"
+                 loading="lazy">
+          </a>
 
-      <form class="form" id="quoteForm">
-        <h3>بيانات مشروعك</h3>
-        <div class="fields">
-          <div class="field"><label for="name">الاسم *</label><input id="name" name="name" required maxlength="80" autocomplete="name" placeholder="اكتب اسمك"></div>
-          <div class="field"><label for="phone">رقم الموبايل *</label><input id="phone" name="phone" type="tel" required maxlength="25" autocomplete="tel" placeholder="رقم للتواصل"></div>
+          <p>
+            التصميم الداخلي والتصميم ثلاثي الأبعاد والتشطيبات
+            والتجديد — حلول منزلية تبدأ بفكرة وخطة واضحة.
+          </p>
+        </div>
 
-          <div class="field">
-            <label for="type">نوع المشروع *</label>
-            <select id="type" name="type" required>
-              <option value="">اختر نوع المشروع</option>
-              <option>شقة</option><option>فيلا</option><option>قصر</option>
-              <option>شاليه</option><option>تجديد مساحة قائمة</option>
-              <option>تصميم 3D فقط</option><option>أخرى</option>
-            </select>
-          </div>
-
-          <div class="field"><label for="area">المساحة التقريبية</label><input id="area" name="area" placeholder="مثال: 150 متر"></div>
-          <div class="field"><label for="location">المنطقة</label><input id="location" name="location" placeholder="المدينة أو المنطقة"></div>
-
-          <div class="field">
-            <label for="budget">الميزانية التقريبية</label>
-            <select id="budget" name="budget">
-              <option value="">اختياري</option>
-              <option>لسه بحدد الميزانية</option>
-              <option>أقل من 200 ألف جنيه</option>
-              <option>200 إلى 500 ألف جنيه</option>
-              <option>500 ألف إلى مليون جنيه</option>
-              <option>أكثر من مليون جنيه</option>
-              <option>أفضل مناقشة الميزانية</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="start">موعد البداية المتوقع</label>
-            <select id="start" name="start">
-              <option value="">اختياري</option>
-              <option>في أقرب وقت</option><option>خلال شهر</option>
-              <option>خلال 3 شهور</option><option>لاحقًا / ما زلت أخطط</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="status">حالة المكان</label>
-            <select id="status" name="status">
-              <option value="">اختياري</option>
-              <option>على الطوب / بدون تشطيب</option>
-              <option>تشطيب قائم يحتاج تجديد</option>
-              <option>محتاج تصميم فقط</option>
-              <option>محتاج تشطيب جزئي</option>
-              <option>لسه باستلم أو بشتري</option>
-            </select>
-          </div>
-
-          <div class="field full">
-            <label for="details">تفاصيل إضافية</label>
-            <textarea id="details" name="details" maxlength="1200" placeholder="قول لنا إيه اللي محتاجه..."></textarea>
+        <div>
+          <h3>روابط سريعة</h3>
+          <div class="footer-links">
+            <a href="#about">عن FORMATIX</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#portfolio">معرض التصميم</a>
+            <a href="#process">مراحل العمل</a>
+            <a href="#contact">اطلب عرض سعر</a>
           </div>
         </div>
 
-        <p class="form-note">* البيانات المطلوبة أساسية لتجهيز الرسالة. لن تُرسل البيانات تلقائيًا؛ راجع الرسالة في واتساب قبل إرسالها.</p>
-        <button class="btn primary" type="submit">جهّز رسالة واتساب ↗</button>
-      </form>
-    </div>
-  </section>
+        <div>
+          <h3>تواصل معنا</h3>
+          <div class="footer-links">
+            <a href="https://wa.me/201032219692"
+               target="_blank"
+               rel="noopener noreferrer">واتساب: 01032219692</a>
 
-  <section class="closing">
-    <div class="wrap closing-inner">
-      <div>
-        <h2>عندك فكرة؟ خلينا نرتب أول خطوة.</h2>
-        <p>كل مشروع بيبدأ بمحادثة واضحة عن احتياجاتك.</p>
-      </div>
-      <a class="btn" href="https://wa.me/201032219692?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20FORMATIX%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85." target="_blank" rel="noopener noreferrer">تواصل مع FORMATIX ↗</a>
-    </div>
-  </section>
-</main>
+            <a href="https://www.facebook.com/profile.php?id=61595418460010"
+               target="_blank"
+               rel="noopener noreferrer">صفحة Facebook</a>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a class="brand" href="#home">
-          <img class="logo" src="LOGOU.jpeg" alt="شعار FORMATIX">
-          <span><strong>FORMATIX</strong><small>BUILD • DESIGN • LIVE</small></span>
-        </a>
-        <p>التصميم الداخلي والتصميم ثلاثي الأبعاد والتشطيبات والتجديد — حلول منزلية تبدأ بفكرة وخطة واضحة.</p>
-      </div>
-
-      <div>
-        <h3>روابط سريعة</h3>
-        <div class="footer-links">
-          <a href="#about">عن FORMATIX</a>
-          <a href="#services">خدماتنا</a>
-          <a href="#portfolio">من أعمالنا</a>
-          <a href="#process">مراحل العمل</a>
-          <a href="#contact">اطلب عرض سعر</a>
+            <a href="https://www.youtube.com/watch?v=ykHj9b2pP6A"
+               target="_blank"
+               rel="noopener noreferrer">YouTube</a>
+          </div>
         </div>
+
       </div>
 
-      <div>
-        <h3>تواصل معنا</h3>
-        <div class="footer-links">
-          <a href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">واتساب: 01032219692</a>
-          <a href="https://www.facebook.com/profile.php?id=61595418460010" target="_blank" rel="noopener noreferrer">صفحة Facebook</a>
-          <a href="https://www.youtube.com/watch?v=ykHj9b2pP6A" target="_blank" rel="noopener noreferrer">YouTube</a>
-        </div>
+      <div class="bottom">
+        <span>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</span>
+        <span>BUILD • DESIGN • LIVE</span>
       </div>
+
     </div>
-    <div class="bottom">
-      <span>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</span>
-      <span>BUILD • DESIGN • LIVE</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<a class="wa" href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
-  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-    <path fill="currentColor" d="M16.04 3.2A12.72 12.72 0 0 0 5.1 22.42L3.3 28.8l6.54-1.72A12.8 12.8 0 1 0 16.04 3.2Zm0 23.25c-2 0-3.95-.54-5.65-1.56l-.4-.24-3.88 1.02 1.04-3.78-.26-.4a10.45 10.45 0 1 1 9.15 4.96Zm5.73-7.83c-.31-.16-1.83-.9-2.12-1-.28-.1-.49-.16-.7.16-.2.31-.8 1-.98 1.2-.18.21-.36.24-.67.08-.31-.15-1.3-.48-2.47-1.53-.91-.8-1.53-1.8-1.71-2.1-.18-.32-.02-.49.14-.65.14-.14.31-.36.47-.54.15-.18.2-.31.3-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.29.31-1.08 1.05-1.08 2.57s1.1 2.98 1.25 3.19c.15.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.83-.75 2.09-1.48.26-.73.26-1.36.18-1.49-.08-.13-.28-.2-.59-.36Z"/>
-  </svg>
-</a>
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa"
+     href="https://wa.me/201032219692"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="تواصل عبر واتساب">
 
-<button class="top" id="top" type="button" aria-label="العودة للأعلى">↑</button>
+    <svg viewBox="0 0 32 32"
+         aria-hidden="true"
+         focusable="false">
+      <path fill="currentColor" d="M16.04 3.2A12.72 12.72 0 0 0 5.1 22.42L3.3 28.8l6.54-1.72A12.8 12.8 0 1 0 16.04 3.2Zm0 23.25c-2 0-3.95-.54-5.65-1.56l-.4-.24-3.88 1.02 1.04-3.78-.26-.4a10.45 10.45 0 1 1 9.15 4.96Zm5.73-7.83c-.31-.16-1.83-.9-2.12-1-.28-.1-.49-.16-.7.16-.2.31-.8 1-.98 1.2-.18.21-.36.24-.67.08-.31-.15-1.3-.48-2.47-1.53-.91-.8-1.53-1.8-1.71-2.1-.18-.32-.02-.49.14-.65.14-.14.31-.36.47-.54.15-.18.2-.31.3-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.29.31-1.08 1.05-1.08 2.57s1.1 2.98 1.25 3.19c.15.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.83-.75 2.09-1.48.26-.73.26-1.36.18-1.49-.08-.13-.28-.2-.59-.36Z"/>
+    </svg>
+  </a>
 
-<script>
-(function () {
-  "use strict";
+  <button class="top"
+          id="top"
+          type="button"
+          aria-label="العودة للأعلى">↑</button>
 
-  const menu = document.getElementById("menu");
-  const nav = document.getElementById("nav");
+  <script>
+    (function () {
+      "use strict";
 
-  if (menu && nav) {
-    menu.addEventListener("click", function () {
-      const opened = nav.classList.toggle("open");
-      menu.setAttribute("aria-expanded", String(opened));
-      menu.textContent = opened ? "×" : "☰";
-    });
+      const menu = document.getElementById("menu");
+      const nav = document.getElementById("nav");
 
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("open");
-        menu.setAttribute("aria-expanded", "false");
-        menu.textContent = "☰";
-      });
-    });
+      /* Mobile navigation */
+      if (menu && nav) {
+        function closeMenu() {
+          nav.classList.remove("open");
+          menu.setAttribute("aria-expanded", "false");
+          menu.textContent = "☰";
+        }
 
-    document.addEventListener("click", function (event) {
-      if (!nav.contains(event.target) && !menu.contains(event.target)) {
-        nav.classList.remove("open");
-        menu.setAttribute("aria-expanded", "false");
-        menu.textContent = "☰";
+        menu.addEventListener("click", function () {
+          const opened = nav.classList.toggle("open");
+          menu.setAttribute("aria-expanded", String(opened));
+          menu.textContent = opened ? "×" : "☰";
+        });
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!nav.contains(event.target) && !menu.contains(event.target)) {
+            closeMenu();
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 740) {
+            closeMenu();
+          }
+        });
       }
-    });
-  }
 
-  const year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
-
-  const topBtn = document.getElementById("top");
-  if (topBtn) {
-    window.addEventListener("scroll", function () {
-      topBtn.classList.toggle("show", window.scrollY > 450);
-    }, { passive: true });
-
-    topBtn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  const form = document.getElementById("quoteForm");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      if (!form.reportValidity()) return;
-
-      const data = new FormData(form);
-      const fields = [
-        ["الاسم", "name"],
-        ["رقم الموبايل", "phone"],
-        ["نوع المشروع", "type"],
-        ["المساحة", "area"],
-        ["المنطقة", "location"],
-        ["الميزانية", "budget"],
-        ["موعد البداية", "start"],
-        ["حالة المكان", "status"],
-        ["تفاصيل إضافية", "details"]
-      ];
-
-      let message = "مرحبًا FORMATIX، أرغب في الاستفسار عن مشروع.\n\n";
-
-      fields.forEach(function (field) {
-        const value = String(data.get(field[1]) || "").trim();
-        if (value) message += field[0] + ": " + value + "\n";
-      });
-
-      message += "\nبرجاء توضيح الخطوة التالية. شكرًا.";
-
-      const url = "https://wa.me/201032219692?text=" + encodeURIComponent(message);
-      const newWindow = window.open(url, "_blank");
-
-      if (newWindow) {
-        newWindow.opener = null;
-      } else {
-        window.location.href = url;
+      /* Current year */
+      const year = document.getElementById("year");
+      if (year) {
+        year.textContent = new Date().getFullYear();
       }
-    });
-  }
-})();
-</script>
+
+      /* Back-to-top button */
+      const topBtn = document.getElementById("top");
+
+      if (topBtn) {
+        window.addEventListener("scroll", function () {
+          topBtn.classList.toggle("show", window.scrollY > 450);
+        }, { passive: true });
+
+        topBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      }
+
+      /* WhatsApp quote form */
+      const form = document.getElementById("quoteForm");
+
+      if (form) {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!form.reportValidity()) {
+            return;
+          }
+
+          const data = new FormData(form);
+
+          const fields = [
+            ["الاسم", "name"],
+            ["رقم الموبايل", "phone"],
+            ["نوع المشروع", "type"],
+            ["المساحة التقريبية", "area"],
+            ["المنطقة", "location"],
+            ["الميزانية", "budget"],
+            ["موعد البداية", "start"],
+            ["حالة المكان", "status"],
+            ["تفاصيل إضافية", "details"]
+          ];
+
+          let message =
+            "مرحبًا FORMATIX، أرغب في الاستفسار عن مشروع.\n\n";
+
+          fields.forEach(function (field) {
+            const value = String(data.get(field[1]) || "").trim();
+
+            if (value) {
+              message += field[0] + ": " + value + "\n";
+            }
+          });
+
+          message += "\nبرجاء توضيح الخطوة التالية. شكرًا.";
+
+          const url =
+            "https://wa.me/201032219692?text=" +
+            encodeURIComponent(message);
+
+          const newWindow = window.open(url, "_blank");
+
+          if (newWindow) {
+            newWindow.opener = null;
+          } else {
+            window.location.href = url;
+          }
+        });
+      }
+    })();
+  </script>
+
 </body>
 </html>
