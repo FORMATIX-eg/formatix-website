@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#11100e">
-  <meta name="description" content="FORMATIX - حلول متكاملة للمنازل: التصميم والتخطيط والديكور والتشطيبات والأثاث والتجهيز.">
+  <meta name="description" content="FORMATIX - حلول متكاملة للتصميم الداخلي والديكور والتشطيبات والأثاث وتجديد المنازل.">
   <title>FORMATIX | Complete Home Solutions</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +22,7 @@
     }
 
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
     body {
       margin: 0;
@@ -34,19 +33,15 @@
     }
 
     a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1160px, 90%);
-      margin: auto;
-    }
-
+    img { max-width: 100%; }
+    .container { width: min(1160px, 90%); margin: auto; }
     .gold { color: var(--gold-light); }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(17,16,14,.95);
+      z-index: 100;
+      background: rgba(17,16,14,.96);
       border-bottom: 1px solid #c9a66b30;
       backdrop-filter: blur(12px);
     }
@@ -65,21 +60,20 @@
       font-weight: 800;
       letter-spacing: 3px;
       direction: ltr;
+      flex-shrink: 0;
     }
 
-    .brand small {
+    .brand-logo {
+      width: 210px;
+      max-height: 72px;
       display: block;
-      color: var(--muted);
-      font-size: 9px;
-      letter-spacing: 2px;
-      text-align: center;
-      line-height: 1.5;
+      object-fit: contain;
     }
 
     .navlinks {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 19px;
       font-size: 13px;
       color: #e0dacf;
     }
@@ -90,21 +84,31 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 23px;
+      gap: 8px;
+      padding: 12px 22px;
       background: linear-gradient(135deg, #e8d3a5, #b58a4e);
       color: #17130d;
       font-weight: 800;
       border-radius: 3px;
       transition: .25s;
       border: 1px solid transparent;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
     }
 
-    .button:hover { transform: translateY(-2px); }
+    .button:hover { transform: translateY(-2px); filter: brightness(1.08); }
 
     .button-outline {
       background: transparent;
       border-color: var(--gold);
       color: var(--gold-light);
+    }
+
+    .button-facebook {
+      background: #1877f2;
+      color: white;
     }
 
     .hero {
@@ -118,10 +122,7 @@
       border-bottom: 1px solid #c9a66b40;
     }
 
-    .hero-content {
-      max-width: 740px;
-      padding: 90px 0;
-    }
+    .hero-content { max-width: 740px; padding: 90px 0; }
 
     .eyebrow {
       color: var(--gold-light);
@@ -137,32 +138,13 @@
       font-weight: 800;
     }
 
-    .hero p {
-      max-width: 620px;
-      color: #e1dcd2;
-      font-size: 17px;
-      margin-bottom: 30px;
-    }
+    .hero p { max-width: 620px; color: #e1dcd2; font-size: 17px; margin-bottom: 30px; }
 
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
     section { padding: 85px 0; }
 
-    .section-head {
-      max-width: 720px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .section-head h2 {
-      font-size: clamp(27px, 4vw, 40px);
-      margin: 8px 0 12px;
-    }
-
+    .section-head { max-width: 720px; margin: 0 auto 42px; text-align: center; }
+    .section-head h2 { font-size: clamp(27px, 4vw, 40px); margin: 8px 0 12px; }
     .section-head p { color: var(--muted); }
 
     .services {
@@ -178,10 +160,7 @@
       overflow: hidden;
     }
 
-    .service:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold);
-    }
+    .service:hover { transform: translateY(-5px); border-color: var(--gold); }
 
     .service img {
       display: block;
@@ -192,22 +171,9 @@
     }
 
     .service-body { padding: 22px; }
-
-    .number {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-      direction: ltr;
-      text-align: right;
-    }
-
+    .number { color: var(--gold); font-size: 12px; letter-spacing: 2px; direction: ltr; text-align: right; }
     .service h3 { margin: 7px 0; font-size: 20px; }
-
-    .service p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 0;
-    }
+    .service p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
 
     .about {
       background: #181612;
@@ -229,11 +195,7 @@
       border: 1px solid #c9a66b70;
     }
 
-    .about h2 {
-      font-size: clamp(29px, 4vw, 42px);
-      line-height: 1.5;
-    }
-
+    .about h2 { font-size: clamp(29px, 4vw, 42px); line-height: 1.5; }
     .about p { color: var(--muted); }
 
     .features {
@@ -256,12 +218,7 @@
       gap: 16px;
     }
 
-    .project {
-      position: relative;
-      overflow: hidden;
-      background: var(--panel);
-    }
-
+    .project { position: relative; overflow: hidden; background: var(--panel); }
     .project img {
       width: 100%;
       height: 300px;
@@ -290,19 +247,70 @@
       gap: 18px;
     }
 
-    .step {
-      border-top: 1px solid var(--gold);
-      padding: 20px 10px;
-    }
-
-    .step strong {
-      color: var(--gold-light);
-      font-size: 27px;
-      direction: ltr;
-      display: block;
-    }
-
+    .step { border-top: 1px solid var(--gold); padding: 20px 10px; }
+    .step strong { color: var(--gold-light); font-size: 27px; direction: ltr; display: block; }
     .step p { color: var(--muted); font-size: 14px; }
+
+    /* Request a quote */
+    .quote-section {
+      background: linear-gradient(180deg, #181612, #11100e);
+      border-top: 1px solid #c9a66b35;
+      border-bottom: 1px solid #c9a66b35;
+    }
+
+    .quote-card {
+      max-width: 850px;
+      margin: auto;
+      padding: clamp(22px, 5vw, 48px);
+      background: #191815;
+      border: 1px solid #c9a66b65;
+      box-shadow: 0 20px 60px #0004;
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field-full { grid-column: 1 / -1; }
+
+    .field label { color: var(--gold-light); font-size: 14px; font-weight: 700; }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-width: 0;
+      border: 1px solid #c9a66b40;
+      border-radius: 3px;
+      padding: 13px 14px;
+      background: #11100e;
+      color: var(--white);
+      font: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus { border-color: var(--gold-light); }
+
+    .field input::placeholder,
+    .field textarea::placeholder { color: #898378; }
+
+    .field select { color-scheme: dark; }
+    .field textarea { resize: vertical; min-height: 125px; }
+    .optional { color: var(--muted); font-size: 11px; font-weight: 400; }
+    .quote-note { color: var(--muted); font-size: 12px; margin: 18px 0; }
+
+    .quote-submit {
+      width: 100%;
+      min-height: 52px;
+      margin-top: 8px;
+    }
 
     .contact {
       background:
@@ -316,6 +324,14 @@
     .contact h2 { font-size: clamp(30px, 4vw, 45px); }
     .contact p { color: var(--muted); }
 
+    .social-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
     footer {
       padding: 30px 0;
       border-top: 1px solid #c9a66b25;
@@ -326,6 +342,27 @@
 
     footer .brand { font-size: 23px; margin-bottom: 8px; }
 
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 90;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 27px;
+      font-weight: 800;
+      box-shadow: 0 5px 22px #0007;
+      border: 2px solid #ffffff30;
+    }
+
+    .floating-whatsapp:hover { transform: translateY(-3px); }
+
     @media (max-width: 850px) {
       .navlinks { gap: 12px; font-size: 12px; }
       .nav-cta { display: none; }
@@ -333,12 +370,14 @@
       .about-grid { gap: 28px; }
       .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .brand-logo { width: 165px; }
     }
 
     @media (max-width: 560px) {
       nav { min-height: 72px; flex-wrap: wrap; padding: 10px 0; }
       .brand { font-size: 23px; }
-      .navlinks { width: 100%; justify-content: space-between; gap: 8px; font-size: 11px; }
+      .brand-logo { width: 145px; max-height: 52px; }
+      .navlinks { width: 100%; justify-content: space-between; gap: 7px; font-size: 11px; }
       .hero { min-height: 570px; }
       .hero-content { padding: 65px 0; }
       .hero p { font-size: 15px; }
@@ -347,35 +386,33 @@
       .service img { height: 230px; }
       .about-image { height: 300px; }
       .project img { height: 270px; }
-      .features { grid-template-columns: 1fr; }
+      .features, .quote-grid { grid-template-columns: 1fr; }
+      .field-full { grid-column: auto; }
+      .quote-card { padding: 22px 17px; }
+      .button { padding: 11px 16px; }
+      .floating-whatsapp { width: 52px; height: 52px; bottom: 14px; left: 14px; }
     }
   </style>
 </head>
-<style>
-.brand-logo {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-</style>
+
 <body>
 
 <header>
   <nav class="container">
-   <a class="brand" href="#home" aria-label="FORMATIX">
- <img src="LOGOU.jpeg" alt="FORMATIX" class="brand-logo">
-</a>
+    <a class="brand" href="#home" aria-label="FORMATIX">
+      <img src="LOGOU.jpeg" alt="FORMATIX" class="brand-logo">
+    </a>
 
     <div class="navlinks">
       <a href="#home">الرئيسية</a>
       <a href="#services">خدماتنا</a>
       <a href="#about">عن الشركة</a>
       <a href="#projects">معرض التصميمات</a>
+      <a href="#quote">اطلب عرض سعر</a>
       <a href="#contact">تواصل معنا</a>
     </div>
 
-    <a class="button nav-cta" href="#contact">ابدأ مشروعك</a>
+    <a class="button nav-cta" href="#quote">اطلب عرض سعر</a>
   </nav>
 </header>
 
@@ -395,7 +432,7 @@
         </p>
         <div class="actions">
           <a class="button" href="#services">اكتشف خدماتنا</a>
-          <a class="button button-outline" href="#contact">ناقشنا مشروعك</a>
+          <a class="button button-outline" href="#quote">اطلب عرض سعر</a>
         </div>
       </div>
     </div>
@@ -406,10 +443,7 @@
       <div class="section-head">
         <div class="eyebrow">WHAT WE DO</div>
         <h2>حلول متكاملة <span class="gold">تحت سقف واحد</span></h2>
-        <p>
-          ستة مجالات متكاملة لتخطيط وتجهيز وتطوير المساحات السكنية،
-          وفق احتياجات كل مشروع ونطاق العمل المتفق عليه.
-        </p>
+        <p>خدمات لتصميم وتجهيز وتطوير المساحات السكنية، وفق احتياجات كل مشروع ونطاق العمل المتفق عليه.</p>
       </div>
 
       <div class="services">
@@ -475,15 +509,8 @@
       <div>
         <div class="eyebrow">ABOUT FORMATIX</div>
         <h2>مش مجرد تشطيب،<br><span class="gold">دي تجربة متكاملة.</span></h2>
-        <p>
-          في FORMATIX نؤمن أن كل مساحة لها إمكانيات تستحق أن تظهر.
-          نربط بين التصميم العملي واللمسة الجمالية والتخطيط الجيد،
-          لنساعدك على تحويل أفكارك إلى مساحة تعبّر عنك.
-        </p>
-        <p>
-          سواء كنت تخطط لتجديد شقة أو تجهيز فيلا أو تطوير شاليه،
-          نبدأ بفهم احتياجاتك وميزانيتك ثم تحديد نطاق العمل المناسب.
-        </p>
+        <p>في FORMATIX نؤمن أن كل مساحة لها إمكانيات تستحق أن تظهر. نربط بين التصميم العملي واللمسة الجمالية والتخطيط الجيد، لنساعدك على تحويل أفكارك إلى مساحة تعبّر عنك.</p>
+        <p>سواء كنت تخطط لتجديد شقة أو تجهيز فيلا أو تطوير شاليه، نبدأ بفهم احتياجاتك وميزانيتك ثم تحديد نطاق العمل المناسب.</p>
         <div class="features">
           <div class="feature">تصميم يراعي احتياجاتك</div>
           <div class="feature">اهتمام بالتفاصيل</div>
@@ -509,50 +536,27 @@
       <div class="portfolio">
         <article class="project">
           <img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="تصميم غرفة معيشة">
-          <div class="project-label">
-            <h3>غرف المعيشة</h3>
-            <p>Living Spaces</p>
-          </div>
+          <div class="project-label"><h3>غرف المعيشة</h3><p>Living Spaces</p></div>
         </article>
-
         <article class="project">
           <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="تصميم فيلا">
-          <div class="project-label">
-            <h3>الفلل والمنازل</h3>
-            <p>Villas & Homes</p>
-          </div>
+          <div class="project-label"><h3>الفلل والمنازل</h3><p>Villas & Homes</p></div>
         </article>
-
         <article class="project">
           <img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="تصميم مطبخ">
-          <div class="project-label">
-            <h3>المطابخ</h3>
-            <p>Kitchens</p>
-          </div>
+          <div class="project-label"><h3>المطابخ</h3><p>Kitchens</p></div>
         </article>
-
         <article class="project">
           <img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="تصميم غرفة نوم">
-          <div class="project-label">
-            <h3>غرف النوم</h3>
-            <p>Bedrooms</p>
-          </div>
+          <div class="project-label"><h3>غرف النوم</h3><p>Bedrooms</p></div>
         </article>
-
         <article class="project">
           <img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="تفاصيل التشطيب">
-          <div class="project-label">
-            <h3>تفاصيل التشطيب</h3>
-            <p>Finishing Details</p>
-          </div>
+          <div class="project-label"><h3>تفاصيل التشطيب</h3><p>Finishing Details</p></div>
         </article>
-
         <article class="project">
           <img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80" alt="تصميم داخلي فاخر">
-          <div class="project-label">
-            <h3>التصميم الفاخر</h3>
-            <p>Luxury Interiors</p>
-          </div>
+          <div class="project-label"><h3>التصميم الفاخر</h3><p>Luxury Interiors</p></div>
         </article>
       </div>
 
@@ -570,27 +574,81 @@
       </div>
 
       <div class="process">
-        <div class="step">
-          <strong>01</strong>
-          <h3>نفهم احتياجاتك</h3>
-          <p>نتعرف على المساحة والميزانية والنتيجة التي تريد الوصول إليها.</p>
-        </div>
-        <div class="step">
-          <strong>02</strong>
-          <h3>نخطط ونصمم</h3>
-          <p>نحدد التصميم والخامات والتفاصيل المناسبة للمشروع.</p>
-        </div>
-        <div class="step">
-          <strong>03</strong>
-          <h3>ننسق التنفيذ</h3>
-          <p>نحدد نطاق الأعمال والجدول والتكلفة قبل بدء التنفيذ.</p>
-        </div>
-        <div class="step">
-          <strong>04</strong>
-          <h3>نراجع التفاصيل</h3>
-          <p>نتابع الأعمال المتفق عليها ونراجعها وفق متطلبات المشروع.</p>
-        </div>
+        <div class="step"><strong>01</strong><h3>نفهم احتياجاتك</h3><p>نتعرف على المساحة والميزانية والنتيجة التي تريد الوصول إليها.</p></div>
+        <div class="step"><strong>02</strong><h3>نخطط ونصمم</h3><p>نحدد التصميم والخامات والتفاصيل المناسبة للمشروع.</p></div>
+        <div class="step"><strong>03</strong><h3>ننسق التنفيذ</h3><p>نحدد نطاق الأعمال والجدول والتكلفة قبل بدء التنفيذ.</p></div>
+        <div class="step"><strong>04</strong><h3>نراجع التفاصيل</h3><p>نتابع الأعمال المتفق عليها ونراجعها وفق متطلبات المشروع.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- QUOTE REQUEST FORM -->
+  <section class="quote-section" id="quote">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">START YOUR PROJECT</div>
+        <h2>اطلب <span class="gold">عرض سعر لمشروعك</span></h2>
+        <p>اكتب تفاصيل مشروعك بالطريقة اللي تناسبك، وفريق FORMATIX هيتواصل معاك لمناقشة الخطوات التالية.</p>
+      </div>
+
+      <form class="quote-card" id="quoteForm">
+        <div class="quote-grid">
+
+          <div class="field">
+            <label for="customerName">الاسم بالكامل *</label>
+            <input id="customerName" name="customerName" type="text" placeholder="اكتب اسمك" required>
+          </div>
+
+          <div class="field">
+            <label for="customerPhone">رقم الموبايل *</label>
+            <input id="customerPhone" name="customerPhone" type="tel" placeholder="رقم للتواصل معاك" required>
+          </div>
+
+          <div class="field field-full">
+            <label for="projectType">نوع المشروع أو الخدمة *</label>
+            <input id="projectType" name="projectType" type="text"
+              placeholder="مثلاً: تشطيب شقة، تصميم 3D، تجديد فيلا، تصميم داخلي..." required>
+          </div>
+
+          <div class="field">
+            <label for="projectArea">المساحة بالمتر المربع</label>
+            <input id="projectArea" name="projectArea" type="text"
+              placeholder="مثلاً: 135 متر أو مساحة تقريبية">
+          </div>
+
+          <div class="field">
+            <label for="projectLocation">مكان المشروع</label>
+            <input id="projectLocation" name="projectLocation" type="text"
+              placeholder="مثلاً: 6 أكتوبر، الشيخ زايد...">
+          </div>
+
+          <div class="field">
+            <label for="projectBudget">الميزانية المتوقعة <span class="optional">(اختياري)</span></label>
+            <input id="projectBudget" name="projectBudget" type="text"
+              placeholder="اكتب الميزانية لو حابب">
+          </div>
+
+          <div class="field">
+            <label for="startDate">موعد بدء المشروع</label>
+            <input id="startDate" name="startDate" type="date">
+          </div>
+
+          <div class="field field-full">
+            <label for="projectDetails">تفاصيل إضافية عن المشروع</label>
+            <textarea id="projectDetails" name="projectDetails"
+              placeholder="احكيلنا عن طلباتك، مستوى التشطيب، عدد الغرف، أو أي تفاصيل تحب نعرفها..."></textarea>
+          </div>
+
+        </div>
+
+        <p class="quote-note">
+          الخانات اللي عليها علامة * مطلوبة. باقي التفاصيل اختيارية، وتقدر تسيبها فاضية لو لسه مش محدد كل حاجة.
+        </p>
+
+        <button class="button quote-submit" type="submit">
+          إرسال طلب عرض السعر عبر WhatsApp
+        </button>
+      </form>
     </div>
   </section>
 
@@ -599,13 +657,17 @@
       <div class="eyebrow">LET'S BUILD YOUR DREAM</div>
       <h2>عندك مساحة وعايز تغيّرها؟</h2>
       <p>احكيلنا عن مشروعك، وابدأ أول خطوة مع FORMATIX.</p>
-      <!-- استبدل الرقم برقم واتساب الشركة بصيغة دولية بدون + أو مسافات -->
-      <a class="button" href="https://wa.me/201032219692" target="_blank" rel="noopener">
-        تواصل معنا عبر واتساب
-      </a>
-      <p style="font-size:12px;margin-top:18px">
-        غيّر رقم واتساب التجريبي إلى رقمك الحقيقي قبل نشر الموقع.
-      </p>
+
+      <div class="social-actions">
+        <a class="button" href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">
+          تواصل معنا عبر WhatsApp
+        </a>
+        <a class="button button-facebook"
+          href="https://www.facebook.com/profile.php?id=61595418460010"
+          target="_blank" rel="noopener noreferrer">
+          تابع FORMATIX على Facebook
+        </a>
+      </div>
     </div>
   </section>
 </main>
@@ -615,22 +677,80 @@
     <div class="brand">FORMATIX</div>
     <div>BUILD • DESIGN • LIVE</div>
     <p>COMPLETE HOME SOLUTIONS</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=61595418460010" target="_blank" rel="noopener noreferrer">Facebook</a>
+      &nbsp; | &nbsp;
+      <a href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </p>
     <p>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<a class="floating-whatsapp"
+   href="https://wa.me/201032219692"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="تواصل مع FORMATIX عبر WhatsApp"
+   title="تواصل معنا عبر WhatsApp">W</a>
+
+<!-- FORMATIX video -->
 <section style="background:#11100e;color:#f5f0e6;padding:50px 20px;text-align:center;">
   <h2 style="color:#d4af37;font-size:30px;margin-bottom:12px;">من أعمال FORMATIX</h2>
   <p style="color:#ccc;font-size:16px;margin-bottom:28px;">شوف رؤيتنا في التصميم والتنفيذ وتحويل الأفكار لواقع.</p>
   <div style="max-width:900px;margin:auto;border:2px solid #d4af37;border-radius:12px;overflow:hidden;box-shadow:0 0 25px #d4af3725;">
     <div style="position:relative;width:100%;padding-top:56.25%;">
-      <iframe src="https://www.youtube.com/embed/ykHj9b2pP6A" title="FORMATIX - أعمالنا" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/ykHj9b2pP6A"
+        title="FORMATIX - أعمالنا"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen loading="lazy"></iframe>
     </div>
   </div>
   <p style="color:#d4af37;margin-top:22px;font-weight:bold;">FORMATIX | BUILD • DESIGN • LIVE</p>
 </section>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // FORMATIX quote request: open WhatsApp with the customer's entered details.
+  document.getElementById("quoteForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const getValue = (id) => document.getElementById(id).value.trim();
+
+    const name = getValue("customerName");
+    const phone = getValue("customerPhone");
+    const type = getValue("projectType");
+
+    if (!name || !phone || !type) {
+      alert("من فضلك املأ الاسم ورقم الموبايل ونوع المشروع.");
+      return;
+    }
+
+    const fields = [
+      ["الاسم", name],
+      ["رقم الموبايل", phone],
+      ["نوع المشروع أو الخدمة", type],
+      ["المساحة", getValue("projectArea")],
+      ["مكان المشروع", getValue("projectLocation")],
+      ["الميزانية المتوقعة", getValue("projectBudget")],
+      ["موعد بدء المشروع", getValue("startDate")],
+      ["تفاصيل إضافية", getValue("projectDetails")]
+    ];
+
+    let message = "مرحبًا FORMATIX، أريد طلب عرض سعر لمشروعي.\n\n";
+    fields.forEach(([label, value]) => {
+      if (value) message += label + ": " + value + "\n";
+    });
+    message += "\nبرجاء التواصل معي لمناقشة التفاصيل. شكرًا لكم.";
+
+    const whatsappURL =
+      "https://wa.me/201032219692?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  });
+</script>
+
 </body>
 </html>
