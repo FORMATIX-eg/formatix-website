@@ -1,756 +1,462 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#11100e">
-  <meta name="description" content="FORMATIX - حلول متكاملة للتصميم الداخلي والديكور والتشطيبات والأثاث وتجديد المنازل.">
-  <title>FORMATIX | Complete Home Solutions</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --gold: #c9a66b;
-      --gold-light: #ead4a5;
-      --black: #11100e;
-      --panel: #191815;
-      --muted: #b7b1a7;
-      --white: #f8f5ef;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.9;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; }
-    .container { width: min(1160px, 90%); margin: auto; }
-    .gold { color: var(--gold-light); }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(17,16,14,.96);
-      border-bottom: 1px solid #c9a66b30;
-      backdrop-filter: blur(12px);
-    }
-
-    nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .brand {
-      color: var(--gold-light);
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      direction: ltr;
-      flex-shrink: 0;
-    }
-
-    .brand-logo {
-      width: 210px;
-      max-height: 72px;
-      display: block;
-      object-fit: contain;
-    }
-
-    .navlinks {
-      display: flex;
-      align-items: center;
-      gap: 19px;
-      font-size: 13px;
-      color: #e0dacf;
-    }
-
-    .navlinks a:hover { color: var(--gold-light); }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 22px;
-      background: linear-gradient(135deg, #e8d3a5, #b58a4e);
-      color: #17130d;
-      font-weight: 800;
-      border-radius: 3px;
-      transition: .25s;
-      border: 1px solid transparent;
-      font-family: inherit;
-      font-size: 14px;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .button:hover { transform: translateY(-2px); filter: brightness(1.08); }
-
-    .button-outline {
-      background: transparent;
-      border-color: var(--gold);
-      color: var(--gold-light);
-    }
-
-    .button-facebook {
-      background: #1877f2;
-      color: white;
-    }
-
-    .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg, rgba(13,12,10,.88), rgba(13,12,10,.5)),
-        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85")
-        center/cover;
-      border-bottom: 1px solid #c9a66b40;
-    }
-
-    .hero-content { max-width: 740px; padding: 90px 0; }
-
-    .eyebrow {
-      color: var(--gold-light);
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: clamp(36px, 5.5vw, 67px);
-      line-height: 1.35;
-      margin: 18px 0;
-      font-weight: 800;
-    }
-
-    .hero p { max-width: 620px; color: #e1dcd2; font-size: 17px; margin-bottom: 30px; }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    section { padding: 85px 0; }
-
-    .section-head { max-width: 720px; margin: 0 auto 42px; text-align: center; }
-    .section-head h2 { font-size: clamp(27px, 4vw, 40px); margin: 8px 0 12px; }
-    .section-head p { color: var(--muted); }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .service {
-      background: var(--panel);
-      border: 1px solid #c9a66b25;
-      transition: .3s;
-      overflow: hidden;
-    }
-
-    .service:hover { transform: translateY(-5px); border-color: var(--gold); }
-
-    .service img {
-      display: block;
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      filter: saturate(.8);
-    }
-
-    .service-body { padding: 22px; }
-    .number { color: var(--gold); font-size: 12px; letter-spacing: 2px; direction: ltr; text-align: right; }
-    .service h3 { margin: 7px 0; font-size: 20px; }
-    .service p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
-
-    .about {
-      background: #181612;
-      border-top: 1px solid #c9a66b20;
-      border-bottom: 1px solid #c9a66b20;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-image {
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-      border: 1px solid #c9a66b70;
-    }
-
-    .about h2 { font-size: clamp(29px, 4vw, 42px); line-height: 1.5; }
-    .about p { color: var(--muted); }
-
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .feature {
-      border-right: 2px solid var(--gold);
-      padding: 8px 14px;
-      background: #ffffff05;
-      font-size: 14px;
-    }
-
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .project { position: relative; overflow: hidden; background: var(--panel); }
-    .project img {
-      width: 100%;
-      height: 300px;
-      display: block;
-      object-fit: cover;
-      transition: transform .5s;
-    }
-
-    .project:hover img { transform: scale(1.05); }
-
-    .project-label {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      padding: 40px 18px 16px;
-      background: linear-gradient(transparent, #000e);
-    }
-
-    .project-label h3 { margin: 0; font-size: 19px; }
-    .project-label p { margin: 0; font-size: 12px; color: #e6d6b7; }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .step { border-top: 1px solid var(--gold); padding: 20px 10px; }
-    .step strong { color: var(--gold-light); font-size: 27px; direction: ltr; display: block; }
-    .step p { color: var(--muted); font-size: 14px; }
-
-    /* Request a quote */
-    .quote-section {
-      background: linear-gradient(180deg, #181612, #11100e);
-      border-top: 1px solid #c9a66b35;
-      border-bottom: 1px solid #c9a66b35;
-    }
-
-    .quote-card {
-      max-width: 850px;
-      margin: auto;
-      padding: clamp(22px, 5vw, 48px);
-      background: #191815;
-      border: 1px solid #c9a66b65;
-      box-shadow: 0 20px 60px #0004;
-    }
-
-    .quote-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .field { display: flex; flex-direction: column; gap: 7px; }
-    .field-full { grid-column: 1 / -1; }
-
-    .field label { color: var(--gold-light); font-size: 14px; font-weight: 700; }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      min-width: 0;
-      border: 1px solid #c9a66b40;
-      border-radius: 3px;
-      padding: 13px 14px;
-      background: #11100e;
-      color: var(--white);
-      font: inherit;
-      font-size: 14px;
-      outline: none;
-      transition: border-color .2s;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus { border-color: var(--gold-light); }
-
-    .field input::placeholder,
-    .field textarea::placeholder { color: #898378; }
-
-    .field select { color-scheme: dark; }
-    .field textarea { resize: vertical; min-height: 125px; }
-    .optional { color: var(--muted); font-size: 11px; font-weight: 400; }
-    .quote-note { color: var(--muted); font-size: 12px; margin: 18px 0; }
-
-    .quote-submit {
-      width: 100%;
-      min-height: 52px;
-      margin-top: 8px;
-    }
-
-    .contact {
-      background:
-        linear-gradient(#11100eeb, #11100ef0),
-        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-      text-align: center;
-      border-top: 1px solid #c9a66b50;
-    }
-
-    .contact h2 { font-size: clamp(30px, 4vw, 45px); }
-    .contact p { color: var(--muted); }
-
-    .social-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    footer {
-      padding: 30px 0;
-      border-top: 1px solid #c9a66b25;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    footer .brand { font-size: 23px; margin-bottom: 8px; }
-
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 90;
-      width: 58px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      font-size: 27px;
-      font-weight: 800;
-      box-shadow: 0 5px 22px #0007;
-      border: 2px solid #ffffff30;
-    }
-
-    .floating-whatsapp:hover { transform: translateY(-3px); }
-
-    @media (max-width: 850px) {
-      .navlinks { gap: 12px; font-size: 12px; }
-      .nav-cta { display: none; }
-      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .about-grid { gap: 28px; }
-      .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .brand-logo { width: 165px; }
-    }
-
-    @media (max-width: 560px) {
-      nav { min-height: 72px; flex-wrap: wrap; padding: 10px 0; }
-      .brand { font-size: 23px; }
-      .brand-logo { width: 145px; max-height: 52px; }
-      .navlinks { width: 100%; justify-content: space-between; gap: 7px; font-size: 11px; }
-      .hero { min-height: 570px; }
-      .hero-content { padding: 65px 0; }
-      .hero p { font-size: 15px; }
-      section { padding: 62px 0; }
-      .services, .portfolio, .about-grid { grid-template-columns: 1fr; }
-      .service img { height: 230px; }
-      .about-image { height: 300px; }
-      .project img { height: 270px; }
-      .features, .quote-grid { grid-template-columns: 1fr; }
-      .field-full { grid-column: auto; }
-      .quote-card { padding: 22px 17px; }
-      .button { padding: 11px 16px; }
-      .floating-whatsapp { width: 52px; height: 52px; bottom: 14px; left: 14px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11110f">
+<meta name="description" content="FORMATIX — التصميم الداخلي، التصميم ثلاثي الأبعاد، التشطيبات، التجديد وحلول المنازل المتكاملة للشقق والفيلات والقصور والشاليهات.">
+<meta property="og:title" content="FORMATIX | BUILD • DESIGN • LIVE">
+<meta property="og:description" content="التصميم الداخلي والتشطيبات والتجديد — حلول تبدأ بفكرة وخطة واضحة.">
+<meta property="og:image" content="https://formatix-eg.github.io/formatix-website/LOGOU.jpeg">
+<title>FORMATIX | التصميم الداخلي والتشطيبات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#11110f;--panel:#191916;--gold:#d7b574;--gold2:#f0d9a7;--text:#f8f4ec;--muted:#b9b2a5;--line:rgba(215,181,116,.24);--green:#25d366;--max:1160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,Tahoma,sans-serif;line-height:1.85}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+.section{padding:88px 0}
+.kicker{color:var(--gold2);font-size:.82rem;font-weight:800;letter-spacing:.05em}
+.kicker:before{content:"";display:inline-block;width:25px;height:1px;background:var(--gold);vertical-align:middle;margin-left:10px}
+.head{max-width:720px;margin-bottom:34px}
+.head h2,.about h2,.video-copy h2,.quote-copy h2{font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.35;margin:10px 0 14px;font-weight:900;letter-spacing:-.03em}
+.head p,.muted{color:var(--muted)}
+.gold{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;min-height:49px;border-radius:999px;border:1px solid transparent;font-weight:800;transition:.2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--gold);color:#17130b}
+.primary:hover{background:var(--gold2)}
+.outline{border-color:var(--line);background:#ffffff05}
+.outline:hover{border-color:var(--gold)}
+header{position:sticky;top:0;z-index:50;background:#11110fef;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:58px;height:55px;object-fit:contain}
+.brand strong{display:block;font-size:1.18rem;letter-spacing:.12em;line-height:1.2}
+.brand small{display:block;color:var(--gold);font-size:.62rem;letter-spacing:.12em;margin-top:5px}
+.links{display:flex;align-items:center;gap:20px}
+.links a{font-size:.85rem;font-weight:700;color:#ddd6c9}
+.links a:hover{color:var(--gold2)}
+.menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;font-size:1.3rem}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#10100ff2,#10100fbf 55%,#10100f80),url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=85") center/cover}
+.hero-content{padding:90px 0 110px;max-width:760px}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--gold2);background:#11110f80;font-size:.82rem;margin-bottom:20px}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.1rem);line-height:1.18;letter-spacing:-.05em;margin:0 0 20px;font-weight:900}
+.hero p{color:#e0d9cd;max-width:650px;font-size:1.08rem;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{color:#d1c7b6;font-size:.84rem;margin-top:36px}
+.strip{background:#171714;border-block:1px solid var(--line)}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:21px 14px;text-align:center;border-left:1px solid var(--line)}
+.strip-item:last-child{border:0}
+.strip-item b{display:block}
+.strip-item small{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.about-pics{position:relative;min-height:470px}
+.about-pics .mainpic{position:absolute;inset:0 35px 38px 0;width:calc(100% - 35px);height:calc(100% - 38px);object-fit:cover;border-radius:22px;border:1px solid var(--line)}
+.about-pics .smallpic{position:absolute;bottom:0;left:0;width:42%;height:40%;object-fit:cover;border:6px solid var(--bg);border-radius:18px}
+.about p{color:var(--muted)}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;list-style:none;margin:24px 0}
+.checks li:before{content:"✓";color:var(--gold);margin-left:8px}
+.services{background:#171714;border-block:1px solid #ffffff0b}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{padding:26px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#ffffff08,#ffffff02);transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#d7b57488}
+.num{color:#d7b57455;font-size:1.7rem;font-weight:900}
+.symbol{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line);border-radius:14px;color:var(--gold);font-size:1.3rem;margin:12px 0}
+.card h3{margin:0 0 8px;font-size:1.12rem}
+.card p{margin:0;color:var(--muted);font-size:.9rem}
+.gallery{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:225px 225px;gap:13px}
+.shot{position:relative;overflow:hidden;border-radius:17px;border:1px solid var(--line);background:var(--panel)}
+.shot:first-child{grid-row:span 2}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.shot:hover img{transform:scale(1.05)}
+.shot:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#000c)}
+.shot span{position:absolute;z-index:1;bottom:15px;right:17px;font-weight:800}
+.note{font-size:.8rem;color:var(--muted);margin-top:14px}
+.process{background:#171714;border-block:1px solid #ffffff0b}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{padding:23px 20px;border-top:1px solid var(--line);background:linear-gradient(#d7b5740b,transparent)}
+.step strong{display:block;color:var(--gold);font-size:2rem}
+.step h3{margin:7px 0}
+.step p{color:var(--muted);font-size:.88rem;margin:0}
+.video-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:center}
+.video-copy p{color:var(--muted)}
+.video{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.quote{background:linear-gradient(135deg,#211d15,#121210);border-block:1px solid var(--line)}
+.quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
+.quote-copy p{color:var(--muted)}
+.contact-link{display:block;padding:14px;border:1px solid var(--line);border-radius:14px;margin-top:12px}
+.contact-link small{display:block;color:var(--muted)}
+.contact-link b{direction:ltr;display:block;text-align:right}
+.form{padding:27px;border:1px solid var(--line);border-radius:20px;background:#171714}
+.form h3{margin:0 0 18px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.83rem;font-weight:700}
+.field input,.field select,.field textarea{width:100%;min-height:47px;background:#10100f;color:var(--text);border:1px solid #3a372f;border-radius:10px;padding:10px 12px}
+.field textarea{min-height:100px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:1px solid var(--gold);border-color:var(--gold)}
+.form-note{font-size:.75rem;color:var(--muted);margin:13px 0}
+.form button{width:100%}
+.closing{padding:52px 0;background:var(--gold);color:#17130b}
+.closing-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.closing h2{margin:0;font-size:clamp(1.6rem,3vw,2.3rem)}
+.closing p{margin:5px 0;color:#403523}
+.closing .btn{background:#17130b;color:#fff4dc}
+.footer{background:#0b0b0a;padding:54px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .8fr .9fr;gap:40px;padding-bottom:32px}
+.footer p,.footer-links{color:var(--muted);font-size:.87rem}
+.footer h3{color:var(--gold2);font-size:1rem}
+.footer-links{display:grid;gap:8px}
+.footer-links a:hover{color:var(--gold2)}
+.bottom{border-top:1px solid #ffffff16;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#817b70;font-size:.76rem}
+.wa{position:fixed;z-index:60;bottom:18px;left:18px;width:57px;height:57px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;box-shadow:0 10px 30px #0008}
+.wa svg{width:31px;height:31px;display:block}
+.top{position:fixed;bottom:84px;left:26px;z-index:55;border:1px solid var(--line);border-radius:50%;background:#201f1a;color:var(--gold2);width:40px;height:40px;display:none}
+.top.show{display:block}
+@media(max-width:950px){
+.links{gap:12px}
+.links a{font-size:.77rem}
+.nav>.nav-cta{display:none}
+.about-grid{gap:32px}
+.cards{grid-template-columns:repeat(2,1fr)}
+.gallery{grid-template-rows:210px 210px}
+.steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:740px){
+.wrap{width:calc(100% - 28px)}
+.section{padding:68px 0}
+.nav{height:72px}
+.logo{width:48px;height:48px}
+.brand strong{font-size:1.02rem}
+.brand small{font-size:.54rem}
+.menu{display:block}
+.links{position:fixed;top:72px;right:0;left:0;background:#11110ff7;display:none;flex-direction:column;align-items:stretch;padding:12px 20px 20px;border-bottom:1px solid var(--line)}
+.links.open{display:flex}
+.links a{padding:11px 0;border-bottom:1px solid #ffffff10;font-size:.95rem}
+.hero{min-height:610px}
+.hero:before{background:linear-gradient(90deg,#10100fe8,#10100fa8),url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80") center/cover}
+.hero-content{padding:72px 0 90px}
+.hero h1{font-size:clamp(2.5rem,10vw,4rem)}
+.strip-grid{grid-template-columns:1fr 1fr}
+.strip-item{padding:15px 6px;border-bottom:1px solid var(--line);font-size:.85rem}
+.strip-item:nth-child(2){border-left:0}
+.strip-item:nth-child(n+3){border-bottom:0}
+.about-grid,.video-grid,.quote-grid{grid-template-columns:1fr;gap:30px}
+.about-pics{min-height:390px;order:2}
+.checks{grid-template-columns:1fr 1fr}
+.cards{grid-template-columns:1fr 1fr;gap:10px}
+.card{padding:19px 15px}
+.card h3{font-size:.98rem}
+.card p{font-size:.81rem}
+.gallery{grid-template-columns:1fr 1fr;grid-template-rows:205px 160px 160px}
+.shot:first-child{grid-row:span 2}
+.steps{gap:10px}
+.step{padding:18px 14px}
+.form{padding:20px 15px}
+.closing-inner{align-items:flex-start;flex-direction:column}
+.footer-grid{grid-template-columns:1fr 1fr;gap:25px}
+.footer-about{grid-column:1/-1}
+}
+@media(max-width:430px){
+.actions .btn{width:100%}
+.cards{grid-template-columns:1fr}
+.checks{grid-template-columns:1fr}
+.fields{grid-template-columns:1fr}
+.field.full{grid-column:auto}
+.gallery{grid-template-rows:190px 145px 145px}
+.footer-grid{grid-template-columns:1fr}
+.footer-about{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important}
+}
+</style>
 </head>
-
 <body>
-
 <header>
-  <nav class="container">
-    <a class="brand" href="#home" aria-label="FORMATIX">
-      <img src="LOGOU.jpeg" alt="FORMATIX" class="brand-logo">
-    </a>
-
-    <div class="navlinks">
-      <a href="#home">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#about">عن الشركة</a>
-      <a href="#projects">معرض التصميمات</a>
-      <a href="#quote">اطلب عرض سعر</a>
-      <a href="#contact">تواصل معنا</a>
-    </div>
-
-    <a class="button nav-cta" href="#quote">اطلب عرض سعر</a>
-  </nav>
+<div class="wrap nav">
+<a class="brand" href="#home" aria-label="FORMATIX الرئيسية">
+<img class="logo" src="LOGOU.jpeg" alt="شعار FORMATIX" onerror="this.hidden=true">
+<span><strong>FORMATIX</strong><small>BUILD • DESIGN • LIVE</small></span>
+</a>
+<nav class="links" id="nav" aria-label="القائمة">
+<a href="#home">الرئيسية</a>
+<a href="#about">عن الشركة</a>
+<a href="#services">خدماتنا</a>
+<a href="#portfolio">معرض الإلهام</a>
+<a href="#process">مراحل العمل</a>
+<a href="#contact">اطلب عرض سعر</a>
+</nav>
+<a class="btn primary nav-cta" href="#contact">ابدأ مشروعك ↙</a>
+<button class="menu" id="menu" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+</div>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">COMPLETE HOME SOLUTIONS</div>
-        <h1>
-          بيت أحلامك يبدأ بفكرة،
-          <span class="gold">ونحوّلها لحقيقة.</span>
-        </h1>
-        <p>
-          من التصميم والتخطيط إلى التشطيبات والديكور والأثاث،
-          تقدم FORMATIX حلولًا متكاملة للمساحات السكنية،
-          باهتمام بالتفاصيل وجودة التنفيذ وجمال التصميم.
-        </p>
-        <div class="actions">
-          <a class="button" href="#services">اكتشف خدماتنا</a>
-          <a class="button button-outline" href="#quote">اطلب عرض سعر</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">WHAT WE DO</div>
-        <h2>حلول متكاملة <span class="gold">تحت سقف واحد</span></h2>
-        <p>خدمات لتصميم وتجهيز وتطوير المساحات السكنية، وفق احتياجات كل مشروع ونطاق العمل المتفق عليه.</p>
-      </div>
-
-      <div class="services">
-        <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=900&q=80" alt="أعمال إنشاء المباني">
-          <div class="service-body">
-            <div class="number">01 / CONSTRUCTION</div>
-            <h3>الإنشاءات والهياكل</h3>
-            <p>تنسيق أعمال البناء والإنشاءات السكنية وفق المخططات ومتطلبات المشروع، بالتعاون مع المتخصصين المعتمدين عند الحاجة.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="التصميم والتخطيط المعماري">
-          <div class="service-body">
-            <div class="number">02 / DESIGN & PLANNING</div>
-            <h3>التصميم والتخطيط</h3>
-            <p>تخطيط المساحات وتوزيع الأثاث واختيار الخامات وإعداد التصورات البصرية قبل بدء التنفيذ.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="تأسيسات الكهرباء والسباكة">
-          <div class="service-body">
-            <div class="number">03 / MEP</div>
-            <h3>السباكة والكهرباء</h3>
-            <p>تنسيق وتنفيذ أعمال التأسيسات الصحية والكهربائية والإضاءة وفق الرسومات الفنية ونطاق المشروع.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="تشطيبات وديكور داخلي">
-          <div class="service-body">
-            <div class="number">04 / FINISHING & DECOR</div>
-            <h3>التشطيبات والديكور</h3>
-            <p>الأرضيات والحوائط والأسقف والدهانات والإضاءة والجبس والخامات التي تمنح المكان شخصيته.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80" alt="الأثاث والتجهيزات الداخلية">
-          <div class="service-body">
-            <div class="number">05 / FURNITURE & FITTING</div>
-            <h3>الأثاث والتجهيزات</h3>
-            <p>اختيار الأثاث وتنسيق التجهيزات وأعمال النجارة والتركيب بما يتناسب مع التصميم والمساحة.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="منزل متكامل التصميم والفرش">
-          <div class="service-body">
-            <div class="number">06 / FULL INTERIOR</div>
-            <h3>التصميم الداخلي والفرش المتكامل</h3>
-            <p>حل متكامل يبدأ من تصور المساحة وينتهي بتنسيق التشطيبات والأثاث والتجهيزات حسب الاتفاق.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div>
-        <div class="eyebrow">ABOUT FORMATIX</div>
-        <h2>مش مجرد تشطيب،<br><span class="gold">دي تجربة متكاملة.</span></h2>
-        <p>في FORMATIX نؤمن أن كل مساحة لها إمكانيات تستحق أن تظهر. نربط بين التصميم العملي واللمسة الجمالية والتخطيط الجيد، لنساعدك على تحويل أفكارك إلى مساحة تعبّر عنك.</p>
-        <p>سواء كنت تخطط لتجديد شقة أو تجهيز فيلا أو تطوير شاليه، نبدأ بفهم احتياجاتك وميزانيتك ثم تحديد نطاق العمل المناسب.</p>
-        <div class="features">
-          <div class="feature">تصميم يراعي احتياجاتك</div>
-          <div class="feature">اهتمام بالتفاصيل</div>
-          <div class="feature">تخطيط واضح للمشروع</div>
-          <div class="feature">تنسيق الخدمات المتكاملة</div>
-        </div>
-      </div>
-
-      <img class="about-image" loading="lazy"
-        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-        alt="تصميم داخلي أنيق">
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">DESIGN INSPIRATION</div>
-        <h2>مساحات تلهمك</h2>
-        <p>نماذج بصرية استرشادية لأساليب التصميم التي يمكن تطويرها بما يناسب مشروعك.</p>
-      </div>
-
-      <div class="portfolio">
-        <article class="project">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="تصميم غرفة معيشة">
-          <div class="project-label"><h3>غرف المعيشة</h3><p>Living Spaces</p></div>
-        </article>
-        <article class="project">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="تصميم فيلا">
-          <div class="project-label"><h3>الفلل والمنازل</h3><p>Villas & Homes</p></div>
-        </article>
-        <article class="project">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="تصميم مطبخ">
-          <div class="project-label"><h3>المطابخ</h3><p>Kitchens</p></div>
-        </article>
-        <article class="project">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="تصميم غرفة نوم">
-          <div class="project-label"><h3>غرف النوم</h3><p>Bedrooms</p></div>
-        </article>
-        <article class="project">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="تفاصيل التشطيب">
-          <div class="project-label"><h3>تفاصيل التشطيب</h3><p>Finishing Details</p></div>
-        </article>
-        <article class="project">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80" alt="تصميم داخلي فاخر">
-          <div class="project-label"><h3>التصميم الفاخر</h3><p>Luxury Interiors</p></div>
-        </article>
-      </div>
-
-      <p style="text-align:center;color:#b7b1a7;font-size:12px;margin-top:22px">
-        الصور المعروضة للإلهام البصري وليست بالضرورة مشروعات منفذة بواسطة FORMATIX.
-      </p>
-    </div>
-  </section>
-
-  <section style="background:#181612">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">OUR PROCESS</div>
-        <h2>من الفكرة إلى <span class="gold">المكان اللي بتحلم بيه</span></h2>
-      </div>
-
-      <div class="process">
-        <div class="step"><strong>01</strong><h3>نفهم احتياجاتك</h3><p>نتعرف على المساحة والميزانية والنتيجة التي تريد الوصول إليها.</p></div>
-        <div class="step"><strong>02</strong><h3>نخطط ونصمم</h3><p>نحدد التصميم والخامات والتفاصيل المناسبة للمشروع.</p></div>
-        <div class="step"><strong>03</strong><h3>ننسق التنفيذ</h3><p>نحدد نطاق الأعمال والجدول والتكلفة قبل بدء التنفيذ.</p></div>
-        <div class="step"><strong>04</strong><h3>نراجع التفاصيل</h3><p>نتابع الأعمال المتفق عليها ونراجعها وفق متطلبات المشروع.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE REQUEST FORM -->
-  <section class="quote-section" id="quote">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">START YOUR PROJECT</div>
-        <h2>اطلب <span class="gold">عرض سعر لمشروعك</span></h2>
-        <p>اكتب تفاصيل مشروعك بالطريقة اللي تناسبك، وفريق FORMATIX هيتواصل معاك لمناقشة الخطوات التالية.</p>
-      </div>
-
-      <form class="quote-card" id="quoteForm">
-        <div class="quote-grid">
-
-          <div class="field">
-            <label for="customerName">الاسم بالكامل *</label>
-            <input id="customerName" name="customerName" type="text" placeholder="اكتب اسمك" required>
-          </div>
-
-          <div class="field">
-            <label for="customerPhone">رقم الموبايل *</label>
-            <input id="customerPhone" name="customerPhone" type="tel" placeholder="رقم للتواصل معاك" required>
-          </div>
-
-          <div class="field field-full">
-            <label for="projectType">نوع المشروع أو الخدمة *</label>
-            <input id="projectType" name="projectType" type="text"
-              placeholder="مثلاً: تشطيب شقة، تصميم 3D، تجديد فيلا، تصميم داخلي..." required>
-          </div>
-
-          <div class="field">
-            <label for="projectArea">المساحة بالمتر المربع</label>
-            <input id="projectArea" name="projectArea" type="text"
-              placeholder="مثلاً: 135 متر أو مساحة تقريبية">
-          </div>
-
-          <div class="field">
-            <label for="projectLocation">مكان المشروع</label>
-            <input id="projectLocation" name="projectLocation" type="text"
-              placeholder="مثلاً: 6 أكتوبر، الشيخ زايد...">
-          </div>
-
-          <div class="field">
-            <label for="projectBudget">الميزانية المتوقعة <span class="optional">(اختياري)</span></label>
-            <input id="projectBudget" name="projectBudget" type="text"
-              placeholder="اكتب الميزانية لو حابب">
-          </div>
-
-          <div class="field">
-            <label for="startDate">موعد بدء المشروع</label>
-            <input id="startDate" name="startDate" type="date">
-          </div>
-
-          <div class="field field-full">
-            <label for="projectDetails">تفاصيل إضافية عن المشروع</label>
-            <textarea id="projectDetails" name="projectDetails"
-              placeholder="احكيلنا عن طلباتك، مستوى التشطيب، عدد الغرف، أو أي تفاصيل تحب نعرفها..."></textarea>
-          </div>
-
-        </div>
-
-        <p class="quote-note">
-          الخانات اللي عليها علامة * مطلوبة. باقي التفاصيل اختيارية، وتقدر تسيبها فاضية لو لسه مش محدد كل حاجة.
-        </p>
-
-        <button class="button quote-submit" type="submit">
-          إرسال طلب عرض السعر عبر WhatsApp
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="eyebrow">LET'S BUILD YOUR DREAM</div>
-      <h2>عندك مساحة وعايز تغيّرها؟</h2>
-      <p>احكيلنا عن مشروعك، وابدأ أول خطوة مع FORMATIX.</p>
-
-      <div class="social-actions">
-        <a class="button" href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">
-          تواصل معنا عبر WhatsApp
-        </a>
-        <a class="button button-facebook"
-          href="https://www.facebook.com/profile.php?id=61595418460010"
-          target="_blank" rel="noopener noreferrer">
-          تابع FORMATIX على Facebook
-        </a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="brand">FORMATIX</div>
-    <div>BUILD • DESIGN • LIVE</div>
-    <p>COMPLETE HOME SOLUTIONS</p>
-    <p>
-      <a href="https://www.facebook.com/profile.php?id=61595418460010" target="_blank" rel="noopener noreferrer">Facebook</a>
-      &nbsp; | &nbsp;
-      <a href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </p>
-    <p>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</p>
-  </div>
-</footer>
-
-<a class="floating-whatsapp"
-   href="https://wa.me/201032219692"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="تواصل مع FORMATIX عبر WhatsApp"
-   title="تواصل معنا عبر WhatsApp">W</a>
-
-<!-- FORMATIX video -->
-<section style="background:#11100e;color:#f5f0e6;padding:50px 20px;text-align:center;">
-  <h2 style="color:#d4af37;font-size:30px;margin-bottom:12px;">من أعمال FORMATIX</h2>
-  <p style="color:#ccc;font-size:16px;margin-bottom:28px;">شوف رؤيتنا في التصميم والتنفيذ وتحويل الأفكار لواقع.</p>
-  <div style="max-width:900px;margin:auto;border:2px solid #d4af37;border-radius:12px;overflow:hidden;box-shadow:0 0 25px #d4af3725;">
-    <div style="position:relative;width:100%;padding-top:56.25%;">
-      <iframe src="https://www.youtube.com/embed/ykHj9b2pP6A"
-        title="FORMATIX - أعمالنا"
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-  <p style="color:#d4af37;margin-top:22px;font-weight:bold;">FORMATIX | BUILD • DESIGN • LIVE</p>
+<section class="hero" id="home">
+<div class="wrap">
+<div class="hero-content">
+<span class="pill">تصميم مدروس • تفاصيل تصنع الفرق</span>
+<h1>مساحتك تستحق<br><span class="gold">تصميمًا يليق بيك.</span></h1>
+<p>من أول فكرة ورسمة 3D لحد التشطيب والتجديد، بنساعدك تخطط لمساحة عملية وأنيقة تناسب ذوقك واحتياجاتك وميزانيتك.</p>
+<div class="actions">
+<a class="btn primary" href="#contact">اطلب عرض سعر ↗</a>
+<a class="btn outline" href="#portfolio">استكشف أفكار التصميم</a>
+</div>
+<div class="hero-note">للشقق • الفيلات • القصور • الشاليهات</div>
+</div>
+</div>
 </section>
 
+<div class="strip">
+<div class="wrap strip-grid">
+<div class="strip-item"><b>حلول منزلية</b><small>من التخطيط للتجديد</small></div>
+<div class="strip-item"><b>تصميم داخلي</b><small>وظيفة وجمال بتوازن</small></div>
+<div class="strip-item"><b>تصميم 3D</b><small>تصور أوضح قبل التنفيذ</small></div>
+<div class="strip-item"><b>تشطيب وتجديد</b><small>نطاق عمل واضح</small></div>
+</div>
+</div>
+
+<section class="section" id="about">
+<div class="wrap about-grid">
+<div class="about-pics">
+<img class="mainpic" loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="تصميم داخلي معاصر">
+<img class="smallpic" loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=80" alt="تفاصيل ديكور">
+</div>
+<div class="about">
+<span class="kicker">عن FORMATIX</span>
+<h2>مش مجرد شكل حلو.<br><span class="gold">دي مساحة معمولة ليك.</span></h2>
+<p>بنؤمن إن التصميم الناجح يجمع بين الذوق والراحة والاستغلال الذكي للمساحة. بنبدأ بفهم احتياجاتك، ونرتب الأفكار في خطة واضحة قبل قرارات التنفيذ.</p>
+<p>سواء بتجهز مكان جديد أو بتجدد مساحة موجودة، هدفنا إنك تفهم الاختيارات ونطاق الشغل والتكلفة المتوقعة قبل البداية.</p>
+<ul class="checks">
+<li>تخطيط يناسب احتياجاتك</li>
+<li>تصور بصري قبل التنفيذ</li>
+<li>نطاق عمل واضح</li>
+<li>حلول حسب الميزانية</li>
+</ul>
+<a class="btn outline" href="#services">اعرف خدماتنا ←</a>
+</div>
+</div>
+</section>
+
+<section class="section services" id="services">
+<div class="wrap">
+<div class="head">
+<span class="kicker">خدماتنا</span>
+<h2>كل تفاصيل مساحتك، <span class="gold">بخطة واضحة.</span></h2>
+<p class="muted">نحدد الخدمة المناسبة حسب احتياجك وطبيعة مشروعك.</p>
+</div>
+<div class="cards">
+<article class="card">
+<span class="num">01</span><div class="symbol">⌂</div>
+<h3>التصميم الداخلي</h3>
+<p>تنسيق الألوان والخامات والإضاءة والأثاث لصناعة مساحة متناسقة وعملية.</p>
+</article>
+<article class="card">
+<span class="num">02</span><div class="symbol">▦</div>
+<h3>التصميم ثلاثي الأبعاد 3D</h3>
+<p>تصور بصري يساعدك تتخيل النتيجة وتراجع الاختيارات قبل التنفيذ.</p>
+</article>
+<article class="card">
+<span class="num">03</span><div class="symbol">✧</div>
+<h3>التشطيبات الداخلية</h3>
+<p>تنسيق بنود التشطيب والخامات والتفاصيل حسب نطاق العمل المتفق عليه.</p>
+</article>
+<article class="card">
+<span class="num">04</span><div class="symbol">⌁</div>
+<h3>التنفيذ والتنسيق</h3>
+<p>ترتيب مراحل العمل والتنسيق بين البنود لتوضيح المسؤوليات والتسلسل.</p>
+</article>
+<article class="card">
+<span class="num">05</span><div class="symbol">↻</div>
+<h3>التجديد وإعادة التأهيل</h3>
+<p>تطوير المساحات القديمة وتحسين توزيعها ومظهرها حسب الحالة والاحتياج.</p>
+</article>
+<article class="card">
+<span class="num">06</span><div class="symbol">⌂</div>
+<h3>حلول منزلية متكاملة</h3>
+<p>دعم مشروع شقتك أو فيلتك أو قصرك أو شاليهك من التخطيط لتفاصيل التجهيز.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section" id="portfolio">
+<div class="wrap">
+<div class="head">
+<span class="kicker">معرض الإلهام</span>
+<h2>أفكار تفتح لك <span class="gold">احتمالات جديدة.</span></h2>
+<p class="muted">صور استرشادية لأساليب ومساحات مختلفة تساعدنا نفهم ذوقك والاتجاه اللي تحبه.</p>
+</div>
+<div class="gallery">
+<div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="غرفة معيشة معاصرة"><span>مساحات معيشة متوازنة</span></div>
+<div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="تصميم بألوان هادئة"><span>بساطة بتفاصيل راقية</span></div>
+<div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="ركن جلوس أنيق"><span>راحة في كل ركن</span></div>
+<div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="تفاصيل خامات وأثاث"><span>الخامات تصنع الفرق</span></div>
+<div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80" alt="مساحة داخلية أنيقة"><span>إضاءة ومزاج متناسق</span></div>
+</div>
+<p class="note">تنويه: الصور للإلهام والاسترشاد البصري، وليست ادعاءً بأنها مشروعات منفذة بواسطة FORMATIX. سيتم تحديث المعرض بأعمال موثقة عند توفرها.</p>
+</div>
+</section>
+
+<section class="section process" id="process">
+<div class="wrap">
+<div class="head">
+<span class="kicker">مراحل العمل</span>
+<h2>من أول مكالمة، <span class="gold">لخطوة محسوبة.</span></h2>
+<p class="muted">تتحدد التفاصيل النهائية حسب طبيعة المشروع ونطاق الخدمة المتفق عليه.</p>
+</div>
+<div class="steps">
+<article class="step"><strong>01</strong><h3>نفهم احتياجاتك</h3><p>نتعرف على المساحة والاستخدام والذوق والأولويات والميزانية التقريبية.</p></article>
+<article class="step"><strong>02</strong><h3>نحدد نطاق العمل</h3><p>نتفق على المطلوب والخدمات المناسبة والبيانات اللازمة للتسعير.</p></article>
+<article class="step"><strong>03</strong><h3>نخطط ونصمم</h3><p>نرتب الأفكار والاختيارات والتصورات وفق نطاق الخدمة.</p></article>
+<article class="step"><strong>04</strong><h3>ننسق الخطوة التالية</h3><p>بعد اعتماد التفاصيل تتحدد مراحل التنفيذ أو التسليم بحسب الاتفاق.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section" id="video">
+<div class="wrap video-grid">
+<div class="video-copy">
+<span class="kicker">شاهد واستلهم</span>
+<h2>خلّي الصورة أوضح <span class="gold">قبل ما تبدأ.</span></h2>
+<p>شاهد الفيديو للتعرف على أفكار التصميم والتفاصيل البصرية. يمكنك فتحه مباشرة على يوتيوب إذا لم يعمل داخل الصفحة.</p>
+<a class="btn outline" href="https://www.youtube.com/watch?v=ykHj9b2pP6A" target="_blank" rel="noopener noreferrer">شاهد على YouTube ↗</a>
+</div>
+<div class="video">
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/ykHj9b2pP6A?rel=0" title="فيديو تصميم داخلي" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+
+<section class="section quote" id="contact">
+<div class="wrap quote-grid">
+<div class="quote-copy">
+<span class="kicker">ابدأ مشروعك</span>
+<h2>احكيلنا عن مساحتك، <span class="gold">ونبدأ من هنا.</span></h2>
+<p>املأ البيانات لتجهيز رسالة على واتساب. هتراجع الرسالة وتبعتها بنفسك؛ النموذج لا يرسل بياناتك تلقائيًا.</p>
+<a class="contact-link" href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer"><small>تواصل مباشر عبر واتساب</small><b>01032219692</b></a>
+<a class="contact-link" href="https://www.facebook.com/profile.php?id=61595418460010" target="_blank" rel="noopener noreferrer"><small>تابع الصفحة</small><b style="direction:rtl">FORMATIX على Facebook</b></a>
+</div>
+
+<form class="form" id="quoteForm">
+<h3>بيانات مشروعك</h3>
+<div class="fields">
+<div class="field"><label for="name">الاسم *</label><input id="name" name="name" required maxlength="80" autocomplete="name" placeholder="اكتب اسمك"></div>
+<div class="field"><label for="phone">رقم الموبايل *</label><input id="phone" name="phone" type="tel" required maxlength="25" autocomplete="tel" placeholder="رقم للتواصل"></div>
+<div class="field"><label for="type">نوع المشروع *</label><select id="type" name="type" required><option value="">اختر نوع المشروع</option><option>شقة</option><option>فيلا</option><option>قصر</option><option>شاليه</option><option>تجديد مساحة قائمة</option><option>تصميم 3D فقط</option><option>أخرى</option></select></div>
+<div class="field"><label for="area">المساحة التقريبية</label><input id="area" name="area" placeholder="مثال: 150 متر"></div>
+<div class="field"><label for="location">المنطقة</label><input id="location" name="location" placeholder="المدينة أو المنطقة"></div>
+<div class="field"><label for="budget">الميزانية التقريبية</label><select id="budget" name="budget"><option value="">اختياري</option><option>لسه بحدد الميزانية</option><option>أقل من 200 ألف جنيه</option><option>200 إلى 500 ألف جنيه</option><option>500 ألف إلى مليون جنيه</option><option>أكثر من مليون جنيه</option><option>أفضل مناقشة الميزانية</option></select></div>
+<div class="field"><label for="start">موعد البداية المتوقع</label><select id="start" name="start"><option value="">اختياري</option><option>في أقرب وقت</option><option>خلال شهر</option><option>خلال 3 شهور</option><option>لاحقًا / ما زلت أخطط</option></select></div>
+<div class="field"><label for="status">حالة المكان</label><select id="status" name="status"><option value="">اختياري</option><option>على الطوب / بدون تشطيب</option><option>تشطيب قائم يحتاج تجديد</option><option>محتاج تصميم فقط</option><option>محتاج تشطيب جزئي</option><option>لسه باستلم أو بشتري</option></select></div>
+<div class="field full"><label for="details">تفاصيل إضافية</label><textarea id="details" name="details" maxlength="1200" placeholder="قول لنا إيه اللي محتاجه..."></textarea></div>
+</div>
+<p class="form-note">* البيانات المطلوبة أساسية لتجهيز الرسالة. لن تُرسل البيانات تلقائيًا؛ راجع الرسالة في واتساب قبل إرسالها.</p>
+<button class="btn primary" type="submit">جهّز رسالة واتساب ↗</button>
+</form>
+</div>
+</section>
+
+<section class="closing">
+<div class="wrap closing-inner">
+<div><h2>عندك فكرة؟ خلينا نرتب أول خطوة.</h2><p>كل مشروع بيبدأ بمحادثة واضحة عن احتياجاتك.</p></div>
+<a class="btn" href="https://wa.me/201032219692?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20FORMATIX%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85." target="_blank" rel="noopener noreferrer">تواصل مع FORMATIX ↗</a>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-about">
+<a class="brand" href="#home">
+<img class="logo" src="LOGOU.jpeg" alt="شعار FORMATIX" onerror="this.hidden=true">
+<span><strong>FORMATIX</strong><small>BUILD • DESIGN • LIVE</small></span>
+</a>
+<p>التصميم الداخلي والتصميم ثلاثي الأبعاد والتشطيبات والتجديد — حلول منزلية تبدأ بفكرة وخطة واضحة.</p>
+</div>
+<div>
+<h3>روابط سريعة</h3>
+<div class="footer-links">
+<a href="#about">عن FORMATIX</a>
+<a href="#services">خدماتنا</a>
+<a href="#portfolio">معرض الإلهام</a>
+<a href="#process">مراحل العمل</a>
+<a href="#contact">اطلب عرض سعر</a>
+</div>
+</div>
+<div>
+<h3>تواصل معنا</h3>
+<div class="footer-links">
+<a href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer">واتساب: 01032219692</a>
+<a href="https://www.facebook.com/profile.php?id=61595418460010" target="_blank" rel="noopener noreferrer">صفحة Facebook</a>
+<a href="https://www.youtube.com/watch?v=ykHj9b2pP6A" target="_blank" rel="noopener noreferrer">YouTube</a>
+</div>
+</div>
+</div>
+<div class="bottom"><span>© <span id="year"></span> FORMATIX. جميع الحقوق محفوظة.</span><span>BUILD • DESIGN • LIVE</span></div>
+</div>
+</footer>
+
+<a class="wa" href="https://wa.me/201032219692" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+<path fill="currentColor" d="M16.04 3.2A12.72 12.72 0 0 0 5.1 22.42L3.3 28.8l6.54-1.72A12.8 12.8 0 1 0 16.04 3.2Zm0 23.25c-2 0-3.95-.54-5.65-1.56l-.4-.24-3.88 1.02 1.04-3.78-.26-.4a10.45 10.45 0 1 1 9.15 4.96Zm5.73-7.83c-.31-.16-1.83-.9-2.12-1-.28-.1-.49-.16-.7.16-.2.31-.8 1-.98 1.2-.18.21-.36.24-.67.08-.31-.15-1.3-.48-2.47-1.53-.91-.8-1.53-1.8-1.71-2.1-.18-.32-.02-.49.14-.65.14-.14.31-.36.47-.54.15-.18.2-.31.3-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.29.31-1.08 1.05-1.08 2.57s1.1 2.98 1.25 3.19c.15.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.83-.75 2.09-1.48.26-.73.26-1.36.18-1.49-.08-.13-.28-.2-.59-.36Z"/>
+</svg>
+</a>
+<button class="top" id="top" aria-label="العودة للأعلى">↑</button>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // FORMATIX quote request: open WhatsApp with the customer's entered details.
-  document.getElementById("quoteForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const getValue = (id) => document.getElementById(id).value.trim();
-
-    const name = getValue("customerName");
-    const phone = getValue("customerPhone");
-    const type = getValue("projectType");
-
-    if (!name || !phone || !type) {
-      alert("من فضلك املأ الاسم ورقم الموبايل ونوع المشروع.");
-      return;
-    }
-
-    const fields = [
-      ["الاسم", name],
-      ["رقم الموبايل", phone],
-      ["نوع المشروع أو الخدمة", type],
-      ["المساحة", getValue("projectArea")],
-      ["مكان المشروع", getValue("projectLocation")],
-      ["الميزانية المتوقعة", getValue("projectBudget")],
-      ["موعد بدء المشروع", getValue("startDate")],
-      ["تفاصيل إضافية", getValue("projectDetails")]
-    ];
-
-    let message = "مرحبًا FORMATIX، أريد طلب عرض سعر لمشروعي.\n\n";
-    fields.forEach(([label, value]) => {
-      if (value) message += label + ": " + value + "\n";
-    });
-    message += "\nبرجاء التواصل معي لمناقشة التفاصيل. شكرًا لكم.";
-
-    const whatsappURL =
-      "https://wa.me/201032219692?text=" + encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank", "noopener,noreferrer");
-  });
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>{
+const opened=nav.classList.toggle('open');
+menu.setAttribute('aria-expanded',String(opened));
+menu.textContent=opened?'×':'☰';
+});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+nav.classList.remove('open');
+menu.setAttribute('aria-expanded','false');
+menu.textContent='☰';
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const topBtn=document.getElementById('top');
+window.addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>450),{passive:true});
+topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('quoteForm').addEventListener('submit',e=>{
+e.preventDefault();
+const f=new FormData(e.currentTarget);
+const items=[
+['الاسم',f.get('name')],
+['رقم الموبايل',f.get('phone')],
+['نوع المشروع',f.get('type')],
+['المساحة',f.get('area')],
+['المنطقة',f.get('location')],
+['الميزانية',f.get('budget')],
+['موعد البداية',f.get('start')],
+['حالة المكان',f.get('status')],
+['تفاصيل إضافية',f.get('details')]
+];
+let msg='مرحبًا FORMATIX، أرغب في الاستفسار عن مشروع.\n\n';
+items.forEach(([k,v])=>{
+if(String(v||'').trim())msg+=k+': '+String(v).trim()+'\n';
+});
+msg+='\nبرجاء توضيح الخطوة التالية. شكرًا.';
+const url='https://wa.me/201032219692?text='+encodeURIComponent(msg);
+const win=window.open(url,'_blank','noopener,noreferrer');
+if(!win)location.href=url;
+});
 </script>
-
 </body>
 </html>
